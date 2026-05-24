@@ -247,11 +247,194 @@
 .cta-band .btn{ background: var(--gold); color: var(--green-ink); position: relative; }
 .cta-band .btn:hover{ background: #ffc52e; }
 
+/* —————————————————————————— FORMULAIRE —————————————————————————— */
+.form-section{
+  padding: 100px 0;
+  background: var(--cream);
+}
+.form-section .section-tag{ margin-bottom: 12px; }
+.form-section h2{ color: var(--green-ink); margin-bottom: 16px; }
+.form-section .form-intro{
+  font-size: 17px; color: var(--ink-soft);
+  max-width: 58ch; margin-bottom: 56px;
+}
+.form-card{
+  background: var(--white);
+  border-radius: 32px;
+  border: 1px solid rgba(5,42,19,.08);
+  padding: 56px;
+  max-width: 880px;
+}
+.form-group{ margin-bottom: 32px; }
+.form-group label{
+  display: block;
+  font-family: var(--display); font-weight: 600; font-size: 16px;
+  color: var(--green-ink); margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.form-group label .req{ color: var(--green); margin-left: 3px; }
+.form-group label .hint{
+  font-family: var(--body); font-weight: 400; font-size: 13px;
+  color: var(--ink-soft); margin-left: 8px; letter-spacing: 0;
+}
+.form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(5,42,19,.16);
+  background: var(--cream);
+  font-family: var(--body); font-size: 16px;
+  color: var(--green-ink);
+  transition: border-color .15s, box-shadow .15s;
+  outline: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(9,142,41,.12);
+  background: var(--white);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder{ color: var(--ink-soft); opacity: .6; }
+.form-group select{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23052a13' stroke-width='1.8'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+.form-group textarea{
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+.form-group .char-count{
+  font-size: 12px; color: var(--ink-soft);
+  text-align: right; margin-top: 6px;
+}
+.form-divider{
+  display: flex; align-items: center; gap: 20px;
+  margin: 40px 0 32px;
+}
+.form-divider::before, .form-divider::after{
+  content:""; flex: 1; height: 1px; background: rgba(5,42,19,.10);
+}
+.form-divider span{
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft);
+  white-space: nowrap;
+}
+.radio-group, .check-group{
+  display: flex; flex-direction: column; gap: 12px;
+  margin-top: 4px;
+}
+.radio-group label, .check-group label{
+  display: flex; align-items: flex-start; gap: 14px;
+  font-family: var(--body); font-weight: 400; font-size: 16px;
+  color: var(--ink); cursor: pointer;
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(5,42,19,.12);
+  transition: border-color .15s, background .15s;
+}
+.radio-group label:has(input:checked),
+.check-group label:has(input:checked){
+  border-color: var(--green);
+  background: rgba(9,142,41,.05);
+}
+.radio-group input, .check-group input{
+  width: auto; flex: none; margin-top: 2px;
+  accent-color: var(--green);
+  width: 18px; height: 18px;
+  padding: 0;
+  border: none; box-shadow: none;
+}
+.radio-group label:has(input:checked), .check-group label:has(input:checked){
+  color: var(--green-ink);
+}
+.form-submit{
+  margin-top: 40px;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.form-submit .btn-primary{
+  background: var(--green); color: var(--cream);
+  padding: 18px 36px; font-size: 17px;
+  min-width: 220px; justify-content: center;
+}
+.form-submit .btn-primary:hover{ background: var(--green-ink); }
+.form-submit small{ font-size: 13px; color: var(--ink-soft); max-width: 32ch; }
+
+/* Confirmation */
+.form-success{
+  display: none;
+  background: rgba(9,142,41,.07);
+  border: 1.5px solid rgba(9,142,41,.25);
+  border-radius: 20px;
+  padding: 40px 48px;
+  margin-top: 32px;
+}
+.form-success.visible{ display: block; }
+.form-success h3{
+  color: var(--green-ink); margin-bottom: 12px;
+  font-size: 26px;
+}
+.form-success p{ color: var(--ink); margin: 0; font-size: 16px; }
+
+/* Mobile nav drawer */
+.nav-drawer{
+  display: none;
+  position: fixed; inset: 0; z-index: 50;
+}
+.nav-drawer.open{ display: block; }
+.nav-drawer-backdrop{
+  position: absolute; inset: 0;
+  background: rgba(5,42,19,.4); backdrop-filter: blur(4px);
+}
+.nav-drawer-panel{
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: min(320px, 90vw);
+  background: var(--cream);
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 8px;
+  overflow-y: auto;
+}
+.nav-drawer-close{
+  align-self: flex-end;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: transparent; border: 1px solid rgba(5,42,19,.15);
+  display: grid; place-items: center; cursor: pointer;
+  color: var(--green-ink); margin-bottom: 16px;
+}
+.nav-drawer-panel a{
+  display: block; padding: 14px 16px;
+  font-weight: 600; font-size: 18px;
+  color: var(--green-ink); border-radius: 12px;
+  transition: background .15s;
+}
+.nav-drawer-panel a:hover{ background: rgba(5,42,19,.06); }
+.nav-drawer-panel .drawer-cta{
+  margin-top: 16px;
+  background: var(--green); color: var(--cream);
+  border-radius: 999px; text-align: center;
+  padding: 16px 24px; font-weight: 600;
+}
+.nav-drawer-panel .drawer-cta:hover{ background: var(--green-ink); }
+
 /* —————————————————————————— RESPONSIVE —————————————————————————— */
 @media (max-width: 1000px){
   .eligible-grid{ grid-template-columns: 1fr; gap: 40px; }
   .phases-grid{ grid-template-columns: 1fr; }
   .process-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px){
+  .form-card{ padding: 32px 24px; }
+  .form-row{ grid-template-columns: 1fr; gap: 0; }
 }
 @media (max-width: 600px){
   .process-grid{ grid-template-columns: 1fr; }
@@ -282,11 +465,27 @@
       Candidater
       <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
     </a>
-    <button class="nav-burger" aria-label="Menu">
-      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 1h20M0 7h20M0 13h20"/></svg>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-drawer">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20"/></svg>
     </button>
   </div>
 </header>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" aria-label="Fermer le menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16"/></svg>
+    </button>
+    <a href="index.html">Accueil</a>
+    <a href="candidater.html" aria-current="page">Intégrer la couveuse</a>
+    <a href="outils.html">Outils numériques</a>
+    <a href="index.html#projets">Projets</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="#formulaire" class="drawer-cta">Candidater à la couveuse</a>
+  </div>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -299,7 +498,7 @@
       presque-prêt à scaler. Candidatures ouvertes pour la cohorte 2026.
     </p>
     <div class="page-hero-actions">
-      <a href="#candidature" class="btn btn-primary">
+      <a href="#formulaire" class="btn btn-primary">
         Démarrer ma candidature
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
@@ -433,7 +632,7 @@
 </section>
 
 <!-- PROCESS -->
-<section class="process" id="candidature">
+<section class="process" id="candidature" style="scroll-margin-top: 90px;">
   <div class="wrap">
     <div class="section-tag" style="margin-bottom: 12px;">Le parcours de candidature</div>
     <h2>5 étapes,<br>4 semaines au total.</h2>
@@ -472,7 +671,7 @@
     </div>
 
     <div style="margin-top: 56px; display: flex; justify-content: flex-start;">
-      <a href="#" class="btn btn-primary">
+      <a href="#formulaire" class="btn btn-primary">
         Démarrer mon dossier
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
@@ -515,12 +714,220 @@
   </div>
 </section>
 
+<!-- FORMULAIRE DE CANDIDATURE -->
+<section class="form-section" id="formulaire" style="scroll-margin-top: 90px;">
+  <div class="wrap">
+    <div class="section-tag">Formulaire de candidature</div>
+    <h2>Déposez votre candidature</h2>
+    <p class="form-intro">
+      20 minutes suffisent. Remplissez ce formulaire, notre équipe vous recontacte sous 4 semaines.
+      Candidatures ouvertes jusqu'au <strong>30 juin 2026</strong>.
+    </p>
+
+    <div class="form-card">
+      <form name="candidature-papricai" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="candidature-form" novalidate>
+        <!-- Netlify bot protection -->
+        <input type="hidden" name="form-name" value="candidature-papricai" />
+        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+
+        <!-- SECTION 1 — IDENTITÉ -->
+        <div class="form-divider"><span>01 · Votre identité</span></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom <span class="req">*</span></label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom <span class="req">*</span></label>
+            <input type="text" id="nom" name="nom" required placeholder="Votre nom de famille" autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="telephone" name="telephone" required placeholder="+228 XX XX XX XX" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pays">Pays de résidence <span class="req">*</span></label>
+            <select id="pays" name="pays" required>
+              <option value="">Choisir un pays…</option>
+              <option>Togo</option>
+              <option>Bénin</option>
+              <option>Burkina Faso</option>
+              <option>Mali</option>
+              <option>Côte d'Ivoire</option>
+              <option>Sénégal</option>
+              <option>Niger</option>
+              <option>Guinée</option>
+              <option>Cameroun</option>
+              <option>Autre pays francophone</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ville">Ville <span class="req">*</span></label>
+            <input type="text" id="ville" name="ville" required placeholder="Ex. Lomé, Cotonou, Ouagadougou…" />
+          </div>
+        </div>
+
+        <!-- SECTION 2 — PROJET -->
+        <div class="form-divider"><span>02 · Votre projet</span></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom-projet">Nom du projet <span class="req">*</span></label>
+            <input type="text" id="nom-projet" name="nom_projet" required placeholder="Le nom de votre projet ou entreprise" />
+          </div>
+          <div class="form-group">
+            <label for="secteur">Secteur ICC <span class="req">*</span></label>
+            <select id="secteur" name="secteur" required>
+              <option value="">Choisir un secteur…</option>
+              <option>Arts visuels</option>
+              <option>Musique</option>
+              <option>Cinéma &amp; audiovisuel</option>
+              <option>Édition</option>
+              <option>Apps &amp; numérique créatif</option>
+              <option>Mode &amp; artisanat d'art</option>
+              <option>Patrimoine culturel</option>
+              <option>Arts vivants (théâtre, danse…)</option>
+              <option>Médias &amp; communication</option>
+              <option>Autre secteur ICC</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="stade">Stade actuel du projet <span class="req">*</span></label>
+          <select id="stade" name="stade" required>
+            <option value="">Choisir un stade…</option>
+            <option>Idée — je n'ai pas encore commencé</option>
+            <option>Concept développé — j'ai réfléchi et j'ai un plan</option>
+            <option>Prototype ou MVP — j'ai un premier produit/service</option>
+            <option>Déjà lancé — j'ai des clients ou des utilisateurs</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">
+            Description courte du projet <span class="req">*</span>
+            <span class="hint">— Qu'est-ce que c'est ? Pour qui ? Pourquoi maintenant ?</span>
+          </label>
+          <textarea id="description" name="description" required maxlength="600"
+            placeholder="Décrivez votre projet en 3 à 5 phrases. Pas besoin de jargon — soyez vous-même."></textarea>
+          <div class="char-count"><span id="desc-count">0</span> / 600 caractères</div>
+        </div>
+
+        <div class="form-group">
+          <label for="motivation">
+            Pourquoi la Couveuse PAPRICAI ? <span class="req">*</span>
+            <span class="hint">— Qu'espérez-vous en retirer ?</span>
+          </label>
+          <textarea id="motivation" name="motivation" required maxlength="500"
+            placeholder="Expliquez-nous ce qui vous amène ici et ce que vous attendez du programme."></textarea>
+          <div class="char-count"><span id="motiv-count">0</span> / 500 caractères</div>
+        </div>
+
+        <!-- SECTION 3 — PROGRAMME -->
+        <div class="form-divider"><span>03 · Programme &amp; modalités</span></div>
+
+        <div class="form-group">
+          <label>Phase visée <span class="req">*</span></label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="phase" value="PAPRICAI (pré-test + incubation)" required />
+              <span><strong>PAPRICAI</strong> — Pré-test 3 mois + incubation jusqu'à 36 mois. Je pars de zéro ou presque.</span>
+            </label>
+            <label>
+              <input type="radio" name="phase" value="PAPRICAI+ (accélération)" />
+              <span><strong>PAPRICAI+</strong> — Accélération. Mon projet est déjà lancé, je veux passer à l'échelle.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Modalité souhaitée <span class="req">*</span></label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="modalite" value="Présentiel à Lomé (EDOU)" required />
+              <span><strong>Présentiel</strong> — Je souhaite intégrer l'espace EDOU à Lomé.</span>
+            </label>
+            <label>
+              <input type="radio" name="modalite" value="Distanciel (IVIC + e-PAPRICAI)" />
+              <span><strong>Distanciel</strong> — Je préfère être accompagné via IVIC et e-PAPRICAI.</span>
+            </label>
+            <label>
+              <input type="radio" name="modalite" value="Les deux (mixte)" />
+              <span><strong>Mixte</strong> — Présentiel et distanciel selon les phases.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="decouverte">Comment avez-vous connu PAPRICAI ?</label>
+          <select id="decouverte" name="decouverte">
+            <option value="">Choisir…</option>
+            <option>Bouche à oreille / un ami</option>
+            <option>Réseaux sociaux (Facebook, Instagram, LinkedIn)</option>
+            <option>Site web de la couveuse</option>
+            <option>Un événement ou une conférence</option>
+            <option>Un ancien incubé PAPRICAI</option>
+            <option>Un partenaire (UE, OIF, GIZ…)</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <!-- SECTION 4 — ENGAGEMENTS -->
+        <div class="form-divider"><span>04 · Engagements</span></div>
+
+        <div class="form-group">
+          <div class="check-group">
+            <label>
+              <input type="checkbox" name="eligibilite" required />
+              <span>J'ai lu les critères d'éligibilité et je confirme y répondre au moins partiellement. <span class="req">*</span></span>
+            </label>
+            <label>
+              <input type="checkbox" name="disponibilite" required />
+              <span>Je suis disponible au moins 2 à 3 jours par semaine pendant la durée du programme. <span class="req">*</span></span>
+            </label>
+            <label>
+              <input type="checkbox" name="contact" required />
+              <span>J'accepte d'être contacté par l'équipe PAPRICAI par email et WhatsApp. <span class="req">*</span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">
+            Envoyer ma candidature
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </button>
+          <small>Gratuit · Sans engagement · Réponse sous 4 semaines</small>
+        </div>
+      </form>
+
+      <!-- Message de confirmation -->
+      <div class="form-success" id="form-success">
+        <h3>Candidature reçue !</h3>
+        <p>Merci pour votre dossier. Notre équipe l'étudie et vous répond dans les 4 semaines. En attendant, n'hésitez pas à nous écrire à <a href="mailto:contact@couveuse-papricai.org" style="color: var(--green); font-weight:600;">contact@couveuse-papricai.org</a> ou via WhatsApp au <a href="tel:+22891152195" style="color: var(--green); font-weight:600;">+228 91 15 21 95</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="cta-band">
   <div class="wrap">
     <h2>Une intuition créative ?<br>C'est le moment.</h2>
     <p>Candidatures ouvertes — cohorte 2026. Pré-test gratuit de 3 mois, sans engagement au-delà. Réponse sous 4 semaines.</p>
-    <a href="#" class="btn">
+    <a href="#formulaire" class="btn">
       Démarrer ma candidature
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
     </a>
@@ -566,5 +973,69 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  /* — Mobile nav drawer — */
+  var burger = document.querySelector('.nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  var backdrop = document.getElementById('nav-backdrop');
+  var closeBtn = drawer.querySelector('.nav-drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    burger.focus();
+  }
+  burger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+  drawer.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', closeDrawer); });
+
+  /* — Compteurs de caractères — */
+  function bindCounter(textareaId, countId) {
+    var ta = document.getElementById(textareaId);
+    var ct = document.getElementById(countId);
+    if (!ta || !ct) return;
+    ta.addEventListener('input', function () { ct.textContent = ta.value.length; });
+  }
+  bindCounter('description', 'desc-count');
+  bindCounter('motivation', 'motiv-count');
+
+  /* — Soumission du formulaire (Netlify Forms) — */
+  var form = document.getElementById('candidature-form');
+  var successBox = document.getElementById('form-success');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      var data = new FormData(form);
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString() })
+        .then(function () {
+          form.style.display = 'none';
+          successBox.classList.add('visible');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(function () {
+          alert('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@couveuse-papricai.org');
+        });
+    });
+  }
+})();
+</script>
 </body>
 </html>
