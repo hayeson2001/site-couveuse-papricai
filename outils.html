@@ -1,0 +1,585 @@
+<!DOCTYPE html><html lang="fr"><head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nos outils numériques — PAPRICAI</title>
+<meta name="description" content="IVIC, e-PAPRICAI et CREAFUND : trois plateformes numériques propriétaires pour former, accompagner et financer les startups ICC d'Afrique de l'Ouest, en présentiel ou à distance." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo-papricai.png" />
+<link rel="apple-touch-icon" href="images/logo-papricai.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Couveuse PAPRICAI" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://couveuse-papricai.org/outils.html" />
+<meta property="og:title" content="Nos outils numériques — IVIC · e-PAPRICAI · CREAFUND" />
+<meta property="og:description" content="IVIC, e-PAPRICAI et CREAFUND : trois plateformes propriétaires pour former, accompagner et financer les startups ICC d'Afrique de l'Ouest. 40 entrepreneurs accompagnés à distance." />
+<meta property="og:image" content="https://couveuse-papricai.org/images/logo-papricai.png" />
+<meta property="og:image:alt" content="Logo Couveuse PAPRICAI" />
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nos outils numériques — IVIC · e-PAPRICAI · CREAFUND" />
+<meta name="twitter:description" content="Trois plateformes propriétaires pour former, accompagner et financer les startups ICC d'Afrique de l'Ouest." />
+<meta name="twitter:image" content="https://couveuse-papricai.org/images/logo-papricai.png" />
+
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ============================================================
+   OUTILS PAGE
+   ============================================================ */
+
+.tools-hero{
+  padding: 64px 0 100px;
+  position: relative;
+  border-bottom: 1px solid rgba(5,42,19,.08);
+}
+.tools-hero .crumb{
+  font-size: 13px; color: var(--green); margin-bottom: 24px;
+  letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+}
+.tools-hero h1{ color: var(--green-ink); max-width: 16ch; }
+.tools-hero h1 em{ font-style: normal; color: var(--orange); }
+.tools-hero .lede{
+  margin-top: 28px;
+  font-size: 19px; color: var(--ink-soft);
+  max-width: 64ch;
+}
+
+.three-pillars{
+  margin-top: 56px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: rgba(5,42,19,.1);
+  border: 1px solid rgba(5,42,19,.1);
+  border-radius: 24px; overflow: hidden;
+}
+.pillar{
+  background: var(--cream);
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.pillar .num{
+  font-family: var(--num); font-weight: 800;
+  font-size: 12px; letter-spacing: .12em;
+  color: var(--orange);
+}
+.pillar .nm{
+  font-family: var(--display); font-weight: 700; font-size: 36px;
+  color: var(--green-ink); letter-spacing: -0.02em;
+}
+.pillar .ds{ font-size: 14px; color: var(--ink-soft); }
+
+/* —————————————————————————— TOOL DETAIL —————————————————————————— */
+.tool-section{
+  padding: 120px 0;
+  border-bottom: 1px solid rgba(5,42,19,.06);
+}
+.tool-section:nth-child(even){
+  background: var(--cream-2);
+}
+.tool-section.dark{
+  background: var(--green-ink);
+  color: var(--cream);
+}
+.tool-section.dark h2, .tool-section.dark .tool-name{ color: var(--cream); }
+.tool-section.dark .tool-tagline{ color: rgba(245,245,224,.85); }
+.tool-section.dark .tool-feat{ background: rgba(245,245,224,.05); border-color: rgba(245,245,224,.12); color: var(--cream); }
+.tool-section.dark .tool-feat h4{ color: var(--cream); }
+.tool-section.dark .tool-feat p{ color: rgba(245,245,224,.75); }
+.tool-section.dark .ph{
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(245,245,224,.06) 0 14px,
+      rgba(245,245,224,.13) 14px 28px);
+  border-color: rgba(245,245,224,.18);
+  color: var(--cream);
+}
+.tool-section.dark .ph::before{ background: var(--gold); box-shadow: 0 0 0 4px var(--green-ink); }
+.tool-section.dark .tool-meta-row .meta-block{ background: rgba(245,245,224,.05); border-color: rgba(245,245,224,.12); }
+.tool-section.dark .tool-meta-row .meta-block .num{ color: var(--gold); }
+.tool-section.dark .tool-meta-row .meta-block .lbl{ color: rgba(245,245,224,.7); }
+
+.tool-grid{
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 80px; align-items: start;
+}
+.tool-grid.reverse{ grid-template-columns: 1.2fr 1fr; }
+.tool-grid.reverse .tool-visual{ order: -1; }
+.tool-text{ position: sticky; top: 100px; }
+.tool-text .label{
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  background: rgba(9,142,41,.1); color: var(--green);
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 20px;
+}
+.tool-section.dark .tool-text .label{ background: rgba(251,177,2,.15); color: var(--gold); }
+.tool-name{
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(64px, 9vw, 132px); line-height: .9;
+  letter-spacing: -0.04em; color: var(--green-ink);
+  margin-bottom: 24px;
+}
+.tool-tagline{
+  font-size: 22px; font-weight: 500; color: var(--green-ink);
+  margin-bottom: 24px; line-height: 1.3;
+  font-family: var(--display);
+}
+.tool-desc{
+  font-size: 16px; color: var(--ink); max-width: 44ch;
+  margin-bottom: 32px;
+}
+
+.tool-visual{
+  position: relative;
+  display: grid; gap: 16px;
+}
+.tool-visual .main{
+  aspect-ratio: 4/3;
+  border-radius: 24px;
+}
+.tool-visual img.tool-photo{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(5,42,19,.08);
+}
+.tool-section.dark .tool-visual img.tool-photo{
+  border-color: rgba(245,245,224,.12);
+}
+.tool-visual img.tool-photo.is-screenshot{
+  object-fit: contain;
+  background: var(--cream);
+  padding: 24px;
+}
+.tool-section.dark .tool-visual img.tool-photo.is-screenshot{
+  background: rgba(245,245,224,.04);
+}
+.tool-visual img.tool-photo.is-logo{
+  padding: 64px;
+  background: var(--white);
+}
+.tool-visual .stats{
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+}
+.tool-stat{
+  background: var(--white);
+  border: 1px solid rgba(5,42,19,.08);
+  border-radius: 16px; padding: 20px;
+}
+.tool-section.dark .tool-stat{
+  background: rgba(245,245,224,.05); border-color: rgba(245,245,224,.12);
+}
+.tool-stat .num{
+  font-family: var(--num); font-weight: 800; font-size: 36px;
+  color: var(--green-ink); letter-spacing: -0.02em; line-height: 1;
+}
+.tool-section.dark .tool-stat .num{ color: var(--gold); }
+.tool-stat .lbl{ font-size: 12px; color: var(--ink-soft); margin-top: 6px; }
+.tool-section.dark .tool-stat .lbl{ color: rgba(245,245,224,.7); }
+
+.tool-features{
+  margin-top: 40px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.tool-feat{
+  background: var(--white);
+  border: 1px solid rgba(5,42,19,.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+.tool-feat .fic{
+  width: 32px; height: 32px; border-radius: 10px;
+  background: rgba(9,142,41,.1); color: var(--green);
+  display: grid; place-items: center; margin-bottom: 14px;
+}
+.tool-section.dark .tool-feat .fic{ background: rgba(251,177,2,.15); color: var(--gold); }
+.tool-feat h4{
+  font-family: var(--display); font-weight: 600; font-size: 17px;
+  color: var(--green-ink); margin: 0 0 6px;
+}
+.tool-feat p{ font-size: 13px; color: var(--ink-soft); margin: 0; }
+
+/* —————————————————————————— ECOSYSTEM —————————————————————————— */
+.ecosystem{
+  padding: 120px 0;
+}
+.ecosystem h2{ color: var(--green-ink); margin-bottom: 16px; max-width: 18ch; }
+.ecosystem .lede{ font-size: 17px; color: var(--ink-soft); max-width: 52ch; margin-bottom: 56px; }
+
+.eco-diagram{
+  position: relative;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px; margin: 0 auto;
+}
+.eco-node{
+  background: var(--white);
+  border: 2px solid rgba(5,42,19,.1);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.eco-node .ic{
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  background: var(--green); color: var(--cream);
+  display: grid; place-items: center;
+  margin: 0 auto 16px;
+  font-family: var(--display); font-weight: 700; font-size: 22px;
+}
+.eco-node:nth-child(2) .ic{ background: var(--gold); color: var(--green-ink); }
+.eco-node:nth-child(3) .ic{ background: var(--orange); color: var(--cream); }
+.eco-node h3{
+  font-family: var(--display); font-weight: 600; font-size: 22px;
+  color: var(--green-ink); margin: 0 0 8px;
+}
+.eco-node p{ font-size: 13px; color: var(--ink-soft); margin: 0; }
+
+.eco-center{
+  margin: 48px auto 0;
+  max-width: 600px;
+  text-align: center;
+  padding: 36px;
+  background: var(--green);
+  color: var(--cream);
+  border-radius: 24px;
+}
+.eco-center .label{
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 12px;
+}
+.eco-center h3{
+  font-family: var(--display); font-weight: 700; font-size: 36px;
+  color: var(--cream); margin: 0;
+}
+
+/* —————————————————————————— RESPONSIVE —————————————————————————— */
+@media (max-width: 1000px){
+  .three-pillars{ grid-template-columns: 1fr; }
+  .tool-grid, .tool-grid.reverse{ grid-template-columns: 1fr; gap: 48px; }
+  .tool-text{ position: static; }
+  .tool-grid.reverse .tool-visual{ order: 0; }
+  .eco-diagram{ grid-template-columns: 1fr; }
+}
+@media (max-width: 600px){
+  .tool-features{ grid-template-columns: 1fr; }
+  .tool-visual .stats{ grid-template-columns: 1fr; }
+}
+</style>
+<style id="_goober"> .go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}</style></head>
+<body style="">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Couveuse PAPRICAI - Accueil">
+      <img src="images/logo-papricai.png" alt="Couveuse PAPRICAI - Premier incubateur d'industries numériques, culturelles et créatives au Togo">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="candidater.html">Intégrer la couveuse</a>
+      <a href="outils.html" aria-current="page">Outils numériques</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#apropos">À propos</a>
+    </nav>
+    <a href="candidater.html" class="nav-cta">
+      Candidater
+      <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 1h20M0 7h20M0 13h20"></path></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="tools-hero">
+  <div class="wrap">
+    <div class="crumb">→ Nos outils numériques</div>
+    <h1>Trois plateformes, <em>une couveuse</em> sans murs.</h1>
+    <p class="lede" style="">
+      PAPRICAI a développé trois outils numériques propriétaires pour incuber à distance : former,
+      accompagner et financer 40 entrepreneurs supplémentaires, partout en Afrique francophone,
+      sans qu'ils aient à se déplacer à Lomé.
+    </p>
+
+    <div class="three-pillars">
+      <div class="pillar">
+        <span class="num" style="font-size: 15px; line-height: 1;">— 01 · e-Learning</span>
+        <span class="nm">IVIC</span>
+        <span class="ds">Formation en ligne adaptée aux ICC. Modules autonomes ou tutorés.</span>
+      </div>
+      <div class="pillar">
+        <span class="num" style="font-size: 15px; line-height: 1;">— 02 · e-Accompagnement</span>
+        <span class="nm">e-PAPRICAI</span>
+        <span class="ds">Mentorat et coaching à distance. Mise en relation experts ouest-africains.</span>
+      </div>
+      <div class="pillar">
+        <span class="num" style="font-size: 15px; line-height: 1;">— 03 · e-Financement</span>
+        <span class="nm">CREAFUND</span>
+        <span class="ds">Crowdfunding dédié aux projets culturels et créatifs africains.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IVIC -->
+<section class="tool-section" id="ivic">
+  <div class="wrap">
+    <div class="tool-grid">
+      <div class="tool-text">
+        <span class="label">— 01 · e-Learning</span>
+        <div class="tool-name">IVIC</div>
+        <div class="tool-tagline">Apprendre les ICC, sur smartphone, en autonomie.</div>
+        <p class="tool-desc">
+          Une plateforme de formation en ligne pensée pour les réalités africaines&nbsp;:
+          modules courts, vidéos compressées pour la 3G, parcours adaptés
+          aux arts visuels, à la musique, au cinéma ou au numérique créatif.
+        </p>
+        <a href="candidater.html" class="btn btn-primary">
+          Candidater pour y accéder
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+        </a>
+      </div>
+
+      <div class="tool-visual">
+        <img class="tool-photo main" src="images/ivic-elearning.jpg" alt="Plateforme IVIC — formation en ligne pour les ICC" />
+        <div class="stats">
+          <div class="tool-stat"><div class="num">42</div><div class="lbl">modules disponibles</div></div>
+          <div class="tool-stat"><div class="num">8</div><div class="lbl">filières ICC</div></div>
+          <div class="tool-stat"><div class="num">100%</div><div class="lbl">mobile-first</div></div>
+        </div>
+        <div class="tool-features">
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h12v8H2z"></path><path d="M7 8l2 2 4-4"></path></svg></div>
+            <h4>Évaluations &amp; certification</h4>
+            <p>Validation des acquis à chaque module. Certificat délivré en fin de parcours.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"></circle><path d="M8 4v4l3 2"></path></svg></div>
+            <h4>Parcours auto-rythmé</h4>
+            <p>Avancez à votre rythme. Compatible mobile, peu gourmand en data.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l4-10 4 10M5 10h4"></path><path d="M11 4l3 9"></path></svg></div>
+            <h4>Cas pratiques ICC</h4>
+            <p>Études de cas réels — projets togolais, béninois, burkinabè.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="6" r="3"></circle><path d="M3 14c.5-3 2.5-4 5-4s4.5 1 5 4"></path></svg></div>
+            <h4>Tuteurs disponibles</h4>
+            <p>Coaches ICC en ligne pour répondre à vos questions sous 24h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- e-PAPRICAI -->
+<section class="tool-section dark" id="e-papricai">
+  <div class="wrap">
+    <div class="tool-grid reverse">
+      <div class="tool-visual">
+        <img class="tool-photo main is-screenshot" src="images/e-papricai.jpg" alt="Plateforme e-PAPRICAI — connexion à l'espace d'accompagnement" />
+        <div class="stats">
+          <div class="tool-stat"><div class="num">60+</div><div class="lbl">mentors actifs</div></div>
+          <div class="tool-stat"><div class="num">4</div><div class="lbl">pays couverts</div></div>
+          <div class="tool-stat"><div class="num">24h</div><div class="lbl">délai de mise en relation</div></div>
+        </div>
+        <div class="tool-features">
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="9" rx="1"></rect><path d="M5 14h6"></path></svg></div>
+            <h4>Visioconférence intégrée</h4>
+            <p>Pas besoin de Zoom externe. Planification, enregistrement, transcription.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 13V4l4 3 4-3 4 3v6"></path><path d="M2 13h12"></path></svg></div>
+            <h4>Suivi de KPIs projet</h4>
+            <p>Indicateurs business simples, mis à jour à chaque coaching.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="6" r="2"></circle><circle cx="11" cy="6" r="2"></circle><path d="M2 13c.5-2 2-3 3-3s2.5 1 3 3M8 13c.5-2 2-3 3-3s2.5 1 3 3"></path></svg></div>
+            <h4>Pair-à-pair</h4>
+            <p>Cohortes en discussion permanente. L'expertise circule entre porteurs.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a5 5 0 0110 0v3a2 2 0 01-4 0V8"></path><path d="M3 11v-3"></path></svg></div>
+            <h4>Mentors ouest-africains</h4>
+            <p>Réseau SAECI&nbsp;: 60 structures, expertise sectorielle locale.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-text">
+        <span class="label">— 02 · e-Accompagnement</span>
+        <div class="tool-name">e-PAPRICAI</div>
+        <div class="tool-tagline">Le mentor qu'il vous faut, où que vous soyez.</div>
+        <p class="tool-desc">
+          Pour les 40 entrepreneurs en distanciel, e-PAPRICAI est l'outil qui rapproche.
+          Mise en relation avec un mentor ouest-africain expert de votre filière,
+          visioconférences planifiées, suivi de progression, et accès à toute la cohorte
+          en pair-à-pair.
+        </p>
+        <a href="candidater.html" class="btn btn-on-dark">
+          Candidater pour y accéder
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREAFUND -->
+<section class="tool-section" id="creafund">
+  <div class="wrap">
+    <div class="tool-grid">
+      <div class="tool-text">
+        <span class="label">— 03 · e-Financement</span>
+        <div class="tool-name">CREAFUND</div>
+        <div class="tool-tagline">Le crowdfunding pensé pour les projets créatifs africains.</div>
+        <p class="tool-desc">
+          CREAFUND permet aux porteurs ICC de financer leurs projets via une campagne
+          en ligne en FCFA et en devises. Paiements mobile money intégrés (Flooz, T-Money,
+          MTN Mobile Money), mentor financier dédié, contreparties culturelles aux contributeurs.
+        </p>
+        <a href="candidater.html" class="btn btn-primary">
+          Candidater pour y accéder
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+        </a>
+      </div>
+
+      <div class="tool-visual">
+        <img class="tool-photo main is-screenshot is-logo" src="images/creafund-logo.jpg" alt="CREAFUND — plateforme de crowdfunding pour projets créatifs africains" />
+        <div class="stats">
+          <div class="tool-stat"><div class="num">200M</div><div class="lbl">FCFA cumulés sur 3 ans</div></div>
+          <div class="tool-stat"><div class="num">10</div><div class="lbl">projets en levée</div></div>
+          <div class="tool-stat"><div class="num">3</div><div class="lbl">opérateurs mobile money</div></div>
+        </div>
+        <div class="tool-features">
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="12" height="8" rx="1"></rect><circle cx="8" cy="8" r="2"></circle></svg></div>
+            <h4>Mobile money intégré</h4>
+            <p>Flooz, T-Money, MTN MoMo, Orange Money. Pas de friction pour vos contributeurs.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l6-4 6 4-6 4z"></path><path d="M2 11l6 4 6-4"></path></svg></div>
+            <h4>Campagnes vérifiées</h4>
+            <p>Chaque projet est validé par la couveuse avant publication. Confiance maximale.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"></circle><path d="M8 5v3l2 2"></path></svg></div>
+            <h4>Mentor financier dédié</h4>
+            <p>Un expert vous accompagne sur le budget, la fiscalité, le pricing des contreparties.</p>
+          </div>
+          <div class="tool-feat">
+            <div class="fic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13V6l5-3 5 3v7"></path><path d="M3 13h10"></path><circle cx="8" cy="9" r="1.5"></circle></svg></div>
+            <h4>Contreparties culturelles</h4>
+            <p>Concerts, expos, livres, vêtements&nbsp;: chaque contributeur reçoit un fragment du projet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="ecosystem">
+  <div class="wrap">
+    <div class="section-tag" style="margin-bottom: 12px;">L'écosystème PAPRICAI</div>
+    <h2>Trois plateformes, une seule trajectoire entrepreneuriale.</h2>
+    <p class="lede">
+      IVIC vous forme. e-PAPRICAI vous accompagne. CREAFUND vous finance. Les trois outils
+      travaillent ensemble — vos progrès dans IVIC alimentent votre profil e-PAPRICAI, votre
+      coaching e-PAPRICAI prépare votre campagne CREAFUND.
+    </p>
+
+    <div class="eco-diagram">
+      <div class="eco-node">
+        <div class="ic">I</div>
+        <h3>Vous vous formez</h3>
+        <p>Modules ICC sur IVIC. Compétences validées par badges.</p>
+      </div>
+      <div class="eco-node">
+        <div class="ic">U</div>
+        <h3>Vous êtes coaché</h3>
+        <p>Mentor e-PAPRICAI dédié. KPIs suivis, milestones validés.</p>
+      </div>
+      <div class="eco-node">
+        <div class="ic">C</div>
+        <h3>Vous levez des fonds</h3>
+        <p>Campagne CREAFUND. Mobile money + devises internationales.</p>
+      </div>
+    </div>
+
+    <div class="eco-center">
+      <div class="label">Résultat</div>
+      <h3>Votre ICC sur le marché, en 18 à 36 mois.</h3>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="wrap" style="padding-bottom: 0;">
+  <section style="background: var(--green-ink); color: var(--cream); border-radius: 36px; padding: 80px 64px; margin: 80px 0 0; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(180deg, transparent 0 32px, rgba(251,177,2,.08) 32px 34px); pointer-events: none;"></div>
+    <div style="position: relative; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: end;">
+      <h2 style="color: var(--cream); font-size: clamp(36px, 4vw, 60px);">Ces trois outils <span style="color: var(--gold);">sont à vous</span> dès la sélection.</h2>
+      <div>
+        <p style="color: rgba(245,245,224,.85); margin-bottom: 24px;">L'accès à IVIC, e-PAPRICAI et CREAFUND est inclus dans le programme PAPRICAI. Aucun frais supplémentaire.</p>
+        <a href="candidater.html" class="btn btn-on-dark">
+          Candidater à la couveuse
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom: 20px;">
+        <img src="images/logo-papricai.png" alt="Couveuse PAPRICAI">
+      </div>
+      <p style="color: rgba(245,245,224,.7); font-size: 14px; max-width: 36ch;">
+        Premier incubateur dédié aux industries culturelles, créatives et numériques en Afrique de l'Ouest. Fondé en 2014.
+      </p>
+    </div>
+    <div>
+      <h4>Programme</h4>
+      <a href="candidater.html">Candidater</a>
+      <a href="#">PAPRICAI</a>
+      <a href="#">PAPRICAI+</a>
+      <a href="#">EDOU</a>
+    </div>
+    <div>
+      <h4>Outils</h4>
+      <a href="outils.html#ivic">IVIC</a>
+      <a href="outils.html#e-papricai">e-PAPRICAI</a>
+      <a href="outils.html#creafund">CREAFUND</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="#">Lomé, Togo</a>
+      <a href="mailto:contact@couveuse-papricai.org">contact@couveuse-papricai.org</a>
+      <a href="tel:+22891152195">+228 91 15 21 95</a>
+      <a href="https://www.linkedin.com/in/couveuse-papricai-7269961b0/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/papricai" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div class="signoff">
+      <span>© 2026 Couveuse PAPRICAI · Association Heinrich Klose</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

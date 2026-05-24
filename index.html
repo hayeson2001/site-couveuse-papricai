@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Couveuse PAPRICAI — L'incubateur ICC d'Afrique de l'Ouest</title>
+<meta name="description" content="Depuis 2014, la Couveuse PAPRICAI accompagne les entrepreneurs des industries culturelles, créatives et numériques d'Afrique de l'Ouest. 100+ projets, 70% de réussite." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo-papricai.png" />
+<link rel="apple-touch-icon" href="images/logo-papricai.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Couveuse PAPRICAI" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://couveuse-papricai.org/" />
+<meta property="og:title" content="Couveuse PAPRICAI — L'incubateur ICC d'Afrique de l'Ouest" />
+<meta property="og:description" content="Depuis 2014, la Couveuse PAPRICAI accompagne les entrepreneurs des industries culturelles, créatives et numériques d'Afrique de l'Ouest. 100+ projets, 70% de réussite." />
+<meta property="og:image" content="https://couveuse-papricai.org/images/hero-atelier.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Formation d'entrepreneurs ICC à la Couveuse PAPRICAI" />
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Couveuse PAPRICAI — L'incubateur ICC d'Afrique de l'Ouest" />
+<meta name="twitter:description" content="Depuis 2014, PAPRICAI accompagne les entrepreneurs des ICC d'Afrique de l'Ouest. 100+ projets, 70% de réussite." />
+<meta name="twitter:image" content="https://couveuse-papricai.org/images/hero-atelier.jpg" />
+
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ============================================================
+   HOMEPAGE-SPECIFIC
+   ============================================================ */
+
+/* HERO */
+.hero{
+  position: relative;
+  padding: 56px 0 120px;
+  overflow: hidden;
+}
+.hero-eyebrow{
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--body); font-size: 13px; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green-ink);
+  padding: 8px 16px; border-radius: 999px;
+  background: rgba(9,142,41,.08);
+  border: 1px solid rgba(9,142,41,.18);
+  margin-bottom: 32px;
+}
+.hero-eyebrow .dot{
+  width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 4px rgba(9,142,41,.15);
+  animation: pulse 2.2s infinite ease-in-out;
+}
+@keyframes pulse{
+  0%, 100%{ box-shadow: 0 0 0 4px rgba(9,142,41,.15); }
+  50%      { box-shadow: 0 0 0 8px rgba(9,142,41,.05); }
+}
+.hero h1{
+  color: var(--green-ink);
+  max-width: 14ch;
+}
+.hero h1 em{
+  font-style: normal; color: var(--green);
+  position: relative; white-space: nowrap;
+}
+.hero h1 em::after{
+  content:""; position: absolute; left: 0; right: 0; bottom: 6%;
+  height: 14%; background: var(--gold); z-index: -1; opacity: .85;
+  transform: skewX(-8deg);
+}
+.hero-lede{
+  max-width: 52ch; font-size: clamp(17px, 1.4vw, 20px);
+  color: var(--ink); margin: 28px 0 40px;
+}
+.hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hero-actions .meta{
+  font-size: 13px; color: var(--ink-soft); margin-left: 4px;
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-actions .meta::before{
+  content:""; width: 24px; height: 1px; background: var(--ink-soft); display: block;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: end;
+}
+.hero-visual{
+  position: relative;
+  aspect-ratio: 4 / 5;
+  min-height: 480px;
+}
+.hero-photo{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 48% 42%;
+  border-radius: var(--radius-lg);
+  filter: saturate(1.05) contrast(1.02);
+}
+.hero-visual .corner{
+  position: absolute; top: -16px; right: -16px;
+  width: 120px; height: 120px;
+  border-radius: 50%; background: var(--gold);
+  display: grid; place-items: center;
+  font-family: var(--display); font-weight: 700; font-size: 16px;
+  color: var(--green-ink); text-align: center; line-height: 1.1;
+  z-index: 2;
+  box-shadow: 0 12px 32px rgba(251,177,2,.35);
+  transform: rotate(-8deg);
+}
+.hero-visual .corner small{
+  font-family: var(--body); font-weight: 500; font-size: 11px;
+  letter-spacing: .08em; text-transform: uppercase;
+  display: block; margin-top: 4px; opacity: .65;
+}
+
+/* Decorative Kente strip */
+.hero-strip{
+  position: absolute; top: 0; bottom: 0; left: -120px; width: 80px;
+  background-image: repeating-linear-gradient(
+    180deg,
+    var(--green-deep) 0 24px,
+    var(--gold) 24px 32px,
+    var(--green-deep) 32px 56px,
+    var(--orange) 56px 64px,
+    var(--cream) 64px 72px,
+    var(--green) 72px 96px,
+    var(--gold) 96px 104px
+  );
+  opacity: .9;
+}
+
+/* Hero stats */
+.hero-stats{
+  margin-top: 80px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(5,42,19,.15);
+}
+.stat{
+  padding: 32px 24px 0 0;
+  border-right: 1px solid rgba(5,42,19,.10);
+}
+.stat:last-child{ border-right: 0; padding-right: 0; }
+.stat .num{
+  font-size: clamp(40px, 4.2vw, 72px);
+  color: var(--green-ink);
+  display: flex; align-items: baseline; gap: 4px;
+}
+.stat .num .suf{ font-size: .55em; color: var(--green); }
+.stat .lbl{
+  font-size: 13px; color: var(--ink-soft);
+  margin-top: 12px; max-width: 22ch;
+}
+
+/* PROMESSE */
+.section{ padding: 120px 0; }
+.section-head{
+  display: grid; grid-template-columns: 1fr 1.5fr;
+  gap: 64px; align-items: end;
+  margin-bottom: 64px;
+}
+.section-tag{
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--green); display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.section-tag::before{
+  content: ""; display: inline-block; width: 24px; height: 1px;
+  background: var(--green);
+}
+.section-head h2{ color: var(--green-ink); }
+.section-head .lede{
+  font-size: 18px; color: var(--ink); max-width: 50ch;
+  padding-bottom: 8px;
+}
+
+.promise{
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.promise-card{
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  border: 1px solid rgba(5,42,19,.08);
+  position: relative; overflow: hidden;
+  transition: transform .2s;
+}
+.promise-card:hover{ transform: translateY(-4px); }
+.promise-card .ic{
+  width: 56px; height: 56px; border-radius: 16px;
+  background: var(--cream-2);
+  display: grid; place-items: center;
+  margin-bottom: 28px;
+  color: var(--green); position: relative;
+}
+.promise-card:nth-child(2) .ic{ background: rgba(251,177,2,.18); color: var(--orange); }
+.promise-card:nth-child(3) .ic{ background: rgba(232,119,34,.12); color: var(--orange); }
+.promise-card h3{ color: var(--green-ink); margin-bottom: 14px; }
+.promise-card p{ color: var(--ink-soft); margin: 0; }
+.promise-card .corner-num{
+  position: absolute; top: 24px; right: 28px;
+  font-family: var(--num); font-weight: 800; font-size: 14px;
+  color: var(--green-ink); opacity: .35;
+}
+
+/* OUTILS NUMÉRIQUES */
+.tools{
+  background: var(--green-ink);
+  color: var(--cream);
+  padding: 120px 0;
+  position: relative; overflow: hidden;
+}
+.tools::before{
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 14px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--green-deep) 0 28px,
+    var(--gold) 28px 36px,
+    var(--green) 36px 56px,
+    var(--orange) 56px 64px,
+    var(--cream) 64px 72px,
+    var(--green-deep) 72px 100px
+  );
+}
+.tools .section-head h2{ color: var(--cream); }
+.tools .section-head .lede{ color: rgba(245,245,224,.78); }
+.tools .section-tag{ color: var(--gold); }
+.tools .section-tag::before{ background: var(--gold); }
+.tools-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.tool-card{
+  background: rgba(245,245,224,.05);
+  border: 1px solid rgba(245,245,224,.12);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px 32px;
+  position: relative; overflow: hidden;
+  transition: background .2s;
+}
+.tool-card:hover{ background: rgba(245,245,224,.08); }
+.tool-card .label{
+  font-size: 11px; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px; display: block;
+}
+.tool-card .name{
+  font-family: var(--display); font-weight: 700; font-size: 56px;
+  letter-spacing: -0.03em; line-height: 1;
+  color: var(--cream); margin-bottom: 20px;
+}
+.tool-card .role{
+  font-size: 15px; color: rgba(245,245,224,.78);
+  margin-bottom: 28px;
+}
+.tool-card ul{
+  list-style: none; padding: 0; margin: 0 0 28px;
+  font-size: 14px; color: rgba(245,245,224,.6);
+}
+.tool-card ul li{
+  padding: 8px 0; border-top: 1px solid rgba(245,245,224,.1);
+  display: flex; gap: 10px;
+}
+.tool-card ul li::before{ content: "→"; color: var(--gold); }
+.tool-card .link{
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--gold); font-weight: 600; font-size: 14px;
+}
+
+/* SECTEURS */
+.sectors{
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: rgba(5,42,19,.12);
+  border: 1px solid rgba(5,42,19,.12);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.sector{
+  background: var(--cream);
+  padding: 36px 28px;
+  display: flex; flex-direction: column; gap: 20px;
+  transition: background .2s;
+  min-height: 200px;
+  position: relative;
+}
+.sector:hover{ background: var(--white); }
+.sector .ic{ width: 44px; height: 44px; color: var(--green); }
+.sector .name{
+  font-family: var(--display); font-weight: 600; font-size: 22px;
+  color: var(--green-ink); letter-spacing: -0.01em;
+}
+.sector .count{
+  margin-top: auto; font-family: var(--num); font-weight: 800;
+  font-size: 14px; color: var(--orange);
+}
+
+/* SUCCESS STORIES */
+.stories{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.story{
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(5,42,19,.08);
+  display: flex; flex-direction: column;
+  transition: transform .2s;
+}
+.story:hover{ transform: translateY(-4px); }
+.story .visual{
+  position: relative; aspect-ratio: 16/10;
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(5,42,19,.07) 0 14px,
+      rgba(5,42,19,.13) 14px 28px);
+  display: flex; align-items: flex-end; padding: 16px;
+}
+.story .visual.has-tint-1{ background-color: rgba(9,142,41,.06); }
+.story .visual.has-tint-2{ background-color: rgba(251,177,2,.10); }
+.story .visual.has-tint-3{ background-color: rgba(232,119,34,.07); }
+.story .visual.has-tint-4{ background-color: rgba(9,142,41,.10); }
+.story .visual.has-tint-5{ background-color: rgba(251,177,2,.07); }
+.story .visual.has-photo{
+  background: transparent;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+}
+.story .visual.has-photo img{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.story .visual.has-photo .sector-tag{
+  position: absolute; left: 16px; bottom: 16px; z-index: 1;
+}
+.story .visual .sector-tag{
+  background: var(--green-ink); color: var(--cream);
+  padding: 6px 12px; border-radius: 999px;
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  font-weight: 600;
+}
+.story .body{ padding: 28px 28px 32px; display: flex; flex-direction: column; flex: 1; }
+.story .name{
+  font-family: var(--display); font-weight: 700; font-size: 30px;
+  color: var(--green-ink); letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.story .lead{ font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+.story .lead strong{ color: var(--green); font-weight: 600; }
+.story p{ font-size: 15px; color: var(--ink); margin-bottom: 20px; }
+.story .impact{
+  margin-top: auto; padding-top: 20px;
+  border-top: 1px solid rgba(5,42,19,.08);
+  display: flex; align-items: baseline; gap: 12px;
+}
+.story .impact .big{
+  font-family: var(--num); font-weight: 800; font-size: 32px;
+  color: var(--orange); letter-spacing: -0.02em;
+}
+.story .impact .lbl{ font-size: 12px; color: var(--ink-soft); letter-spacing: .04em; }
+
+.story.feat{
+  grid-row: span 2;
+  background: var(--green-ink); color: var(--cream);
+  border: none;
+}
+.story.feat .visual{
+  background-color: rgba(245,245,224,.04);
+  background-image: repeating-linear-gradient(135deg,
+      rgba(245,245,224,.06) 0 14px,
+      rgba(245,245,224,.12) 14px 28px);
+  aspect-ratio: 16/12;
+}
+.story.feat .visual .sector-tag{ background: var(--gold); color: var(--green-ink); }
+.story.feat .name{ color: var(--cream); font-size: clamp(40px, 4vw, 56px); }
+.story.feat .lead{ color: rgba(245,245,224,.7); }
+.story.feat .lead strong{ color: var(--gold); }
+.story.feat p{ color: rgba(245,245,224,.85); font-size: 16px; }
+.story.feat .impact{ border-top-color: rgba(245,245,224,.15); }
+.story.feat .impact .big{ color: var(--gold); font-size: 44px; }
+.story.feat .impact .lbl{ color: rgba(245,245,224,.65); }
+
+/* TIMELINE */
+.timeline-section{
+  background: var(--cream-2);
+  padding: 120px 0;
+}
+.timeline{
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.timeline::before{
+  content: ""; position: absolute; left: 0; right: 0; top: 64px;
+  height: 2px; background: rgba(5,42,19,.15);
+  z-index: 0;
+}
+.step{
+  position: relative; z-index: 1;
+  padding-top: 96px;
+}
+.step .dot{
+  position: absolute; top: 48px; left: 0;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--cream); border: 2px solid var(--green);
+  display: grid; place-items: center;
+  font-family: var(--num); font-weight: 800; font-size: 14px;
+  color: var(--green-ink);
+}
+.step:nth-child(2) .dot{ background: var(--gold); border-color: var(--gold); }
+.step:nth-child(3) .dot{ background: var(--green); border-color: var(--green); color: var(--cream); }
+.step:nth-child(4) .dot{ background: var(--orange); border-color: var(--orange); color: var(--cream); }
+.step .duration{
+  font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-soft); font-weight: 600; margin-bottom: 12px;
+}
+.step h3{ color: var(--green-ink); margin-bottom: 10px; font-size: 24px; }
+.step p{ font-size: 14px; color: var(--ink); margin: 0; max-width: 28ch; }
+
+/* TÉMOIGNAGES */
+.testimonials{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.testi{
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid rgba(5,42,19,.08);
+  position: relative;
+}
+.testi .quote-mark{
+  position: absolute; top: 24px; right: 28px;
+  font-family: var(--display); font-weight: 700; font-size: 64px;
+  color: var(--gold); line-height: 1; opacity: .6;
+}
+.testi blockquote{
+  font-family: var(--display); font-weight: 500; font-size: 22px;
+  line-height: 1.3; color: var(--green-ink);
+  margin: 0 0 28px; letter-spacing: -0.01em;
+}
+.testi .who{
+  display: flex; align-items: center; gap: 14px;
+  padding-top: 20px; border-top: 1px solid rgba(5,42,19,.08);
+}
+.testi .avatar{
+  width: 48px; height: 48px; border-radius: 50%;
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(5,42,19,.1) 0 6px,
+      rgba(5,42,19,.18) 6px 12px);
+  flex: none;
+  overflow: hidden;
+  position: relative;
+}
+.testi .avatar img{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.testi .meta .name{ font-weight: 600; color: var(--green-ink); font-size: 15px; }
+.testi .meta .role{ font-size: 13px; color: var(--ink-soft); }
+
+/* PARTENAIRES */
+.partners{
+  padding: 80px 0;
+  border-top: 1px solid rgba(5,42,19,.10);
+  border-bottom: 1px solid rgba(5,42,19,.10);
+}
+.partners h4{
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-soft); text-align: center; margin-bottom: 32px;
+}
+.partners-row{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px 32px;
+  align-items: center;
+}
+.partner{
+  height: 80px; border-radius: 10px;
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(5,42,19,.05) 0 10px,
+      rgba(5,42,19,.10) 10px 20px);
+  display: grid; place-items: center;
+  font-family: var(--display); font-weight: 600; font-size: 18px;
+  color: rgba(5,42,19,.55);
+  letter-spacing: -0.01em;
+  overflow: hidden;
+}
+.partner.has-logo{
+  background: transparent;
+  padding: 6px 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.partner.has-logo img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.partner.span-2{ grid-column: span 2; }
+
+/* FINAL CTA */
+.final-cta{
+  margin: 120px 0 0;
+  background: var(--green);
+  border-radius: 36px;
+  padding: 80px 64px;
+  color: var(--cream);
+  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px;
+  align-items: center;
+}
+.final-cta::before{
+  content:""; position: absolute; top:-40px; right: -40px;
+  width: 240px; height: 240px; border-radius: 50%;
+  background: var(--gold); opacity: .25;
+}
+.final-cta::after{
+  content:""; position: absolute; bottom:-60px; right: 100px;
+  width: 160px; height: 160px; border-radius: 50%;
+  background: var(--orange); opacity: .3;
+}
+.final-cta h2{
+  font-size: clamp(36px, 4vw, 60px);
+  color: var(--cream); position: relative; z-index: 2;
+}
+.final-cta .right{ position: relative; z-index: 2; }
+.final-cta .right p{ color: rgba(245,245,224,.85); font-size: 17px; margin-bottom: 24px; }
+.final-cta .right .btn{ background: var(--gold); color: var(--green-ink); }
+.final-cta .right .btn:hover{ background: #ffc52e; }
+.final-cta .right small{
+  display: block; margin-top: 20px; font-size: 13px;
+  color: rgba(245,245,224,.7);
+}
+
+/* MOBILE NAV DRAWER */
+.nav-drawer{
+  display: none;
+  position: fixed; inset: 0; z-index: 50;
+}
+.nav-drawer.open{ display: block; }
+.nav-drawer-backdrop{
+  position: absolute; inset: 0;
+  background: rgba(5,42,19,.4); backdrop-filter: blur(4px);
+}
+.nav-drawer-panel{
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: min(320px, 90vw);
+  background: var(--cream);
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 8px;
+  overflow-y: auto;
+}
+.nav-drawer-close{
+  align-self: flex-end;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: transparent; border: 1px solid rgba(5,42,19,.15);
+  display: grid; place-items: center; cursor: pointer;
+  color: var(--green-ink); margin-bottom: 16px;
+}
+.nav-drawer-panel a{
+  display: block; padding: 14px 16px;
+  font-weight: 600; font-size: 18px;
+  color: var(--green-ink); border-radius: 12px;
+  transition: background .15s;
+}
+.nav-drawer-panel a:hover{ background: rgba(5,42,19,.06); }
+.nav-drawer-panel .drawer-cta{
+  margin-top: 16px;
+  background: var(--green); color: var(--cream);
+  border-radius: 999px; text-align: center;
+  padding: 16px 24px; font-weight: 600;
+}
+.nav-drawer-panel .drawer-cta:hover{ background: var(--green-ink); }
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .stories{ grid-template-columns: 1fr 1fr; }
+  .story.feat{ grid-row: span 1; grid-column: span 2; }
+  .sectors{ grid-template-columns: repeat(2, 1fr); }
+  .partners-row{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 880px){
+  .hero{ padding: 32px 0 80px; }
+  .hero-grid{ grid-template-columns: 1fr; gap: 48px; }
+  .hero-strip{ display: none; }
+  .hero-stats{ grid-template-columns: 1fr 1fr; gap: 24px; }
+  .stat{ border-right: 0; border-top: 1px solid rgba(5,42,19,.1); padding: 24px 0 0; }
+  .stat:nth-child(odd){ border-right: 1px solid rgba(5,42,19,.1); padding-right: 16px; }
+  .section{ padding: 80px 0; }
+  .section-head{ grid-template-columns: 1fr; gap: 16px; }
+  .promise, .tools-grid, .testimonials{ grid-template-columns: 1fr; }
+  .timeline{ grid-template-columns: 1fr; gap: 32px; }
+  .timeline::before{ left: 18px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+  .step{ padding-top: 0; padding-left: 56px; }
+  .step .dot{ top: 0; left: 0; }
+  .stories{ grid-template-columns: 1fr; }
+  .story.feat{ grid-column: span 1; }
+  .final-cta{ grid-template-columns: 1fr; padding: 48px 32px; margin-top: 80px; border-radius: 24px; }
+  .partners-row{ grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .partner.span-2{ grid-column: span 2; }
+}
+@media (max-width: 480px){
+  .hero-stats{ grid-template-columns: 1fr; }
+  .stat{ border-right: 0 !important; padding-right: 0 !important; }
+  .sectors{ grid-template-columns: 1fr; }
+  .tool-card .name{ font-size: 44px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Couveuse PAPRICAI - Accueil">
+      <img src="images/logo-papricai.png" alt="Couveuse PAPRICAI - Premier incubateur d'industries numériques, culturelles et créatives au Togo" />
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="candidater.html">Intégrer la couveuse</a>
+      <a href="outils.html">Outils numériques</a>
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+    </nav>
+    <a href="candidater.html" class="nav-cta">
+      Candidater
+      <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-drawer">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" aria-label="Fermer le menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16"/></svg>
+    </button>
+    <a href="index.html">Accueil</a>
+    <a href="candidater.html">Intégrer la couveuse</a>
+    <a href="outils.html">Outils numériques</a>
+    <a href="#projets">Projets</a>
+    <a href="#apropos">À propos</a>
+    <a href="candidater.html" class="drawer-cta">Candidater à la couveuse</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-strip" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Candidatures ouvertes · Cohorte 2026
+        </span>
+        <h1>De l'idée à <em>l'entreprise</em>, pour les créatifs d'Afrique de l'Ouest.</h1>
+        <p class="hero-lede">
+          Depuis 2014, la Couveuse PAPRICAI accompagne les jeunes entrepreneur.e.s
+          des industries culturelles, créatives et numériques du Togo, du Bénin,
+          du Burkina, du Mali et au-delà. Pré-test, incubation, accélération&nbsp;:
+          trois étapes pour transformer une intuition créative en activité pérenne.
+        </p>
+        <div class="hero-actions">
+          <a href="candidater.html" class="btn btn-primary">
+            Candidater à la couveuse
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="outils.html" class="btn btn-ghost">Découvrir nos outils</a>
+          <span class="meta">12 ans · 100+ entrepreneurs · 4 pays</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="hero-photo" src="images/hero-atelier.jpg" alt="Formation d'entrepreneurs ICC à la couveuse PAPRICAI" />
+        <div class="corner" aria-label="Taux de réussite">
+          70%<br>
+          <small>de réussite</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO STATS -->
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="num">100<span class="suf">+</span></div>
+        <div class="lbl">Entrepreneurs accompagnés sur 3 ans</div>
+      </div>
+      <div class="stat">
+        <div class="num">200<span class="suf">M</span></div>
+        <div class="lbl">FCFA de chiffre d'affaires cumulé</div>
+      </div>
+      <div class="stat">
+        <div class="num">50</div>
+        <div class="lbl">Projets en prototypage &amp; test marché</div>
+      </div>
+      <div class="stat">
+        <div class="num">60</div>
+        <div class="lbl">Structures adhérentes du réseau SAECI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMESSE -->
+<section class="section" id="promesse">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">La promesse</div>
+        <h2>Trois piliers, un seul objectif&nbsp;: faire émerger les ICC d'Afrique de l'Ouest.</h2>
+      </div>
+      <p class="lede">
+        Nous ne sommes pas une simple structure d'accompagnement. PAPRICAI est un
+        écosystème complet — humain, numérique et physique — pensé pour les
+        spécificités des industries culturelles et créatives africaines.
+      </p>
+    </div>
+
+    <div class="promise">
+      <article class="promise-card">
+        <span class="corner-num" aria-hidden="true">01</span>
+        <div class="ic" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="14" cy="10" r="4"/>
+            <path d="M5 24c1.5-4.5 5-7 9-7s7.5 2.5 9 7"/>
+            <circle cx="22" cy="8" r="2" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3>Accompagnement individualisé</h3>
+        <p>Coaching personnalisé, mentorat de pairs, suivi sur 1 à 36 mois. Chaque projet bénéficie d'un parcours sur mesure, depuis l'idée jusqu'au test marché.</p>
+      </article>
+
+      <article class="promise-card">
+        <span class="corner-num" aria-hidden="true">02</span>
+        <div class="ic" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="14" cy="14" r="9"/>
+            <path d="M5 14h18M14 5c3 3 3 15 0 18M14 5c-3 3-3 15 0 18"/>
+          </svg>
+        </div>
+        <h3>Réseau ouest-africain</h3>
+        <p>Accès à la communauté SAECI — 60 structures adhérentes au Togo, Bénin, Burkina Faso et au-delà. Partenariats avec UE, OIF, GIZ, AfriLabs, Afric'Innov.</p>
+      </article>
+
+      <article class="promise-card">
+        <span class="corner-num" aria-hidden="true">03</span>
+        <div class="ic" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 22V6l10-3 10 3v16"/>
+            <path d="M4 22h20"/>
+            <path d="M10 22v-9h8v9"/>
+          </svg>
+        </div>
+        <h3>Formation spécialisée ICC</h3>
+        <p>Programmes pensés pour les arts visuels, la musique, le cinéma, l'édition, la mode, l'audiovisuel et le numérique. Compétences business adaptées aux réalités créatives.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUTILS NUMÉRIQUES -->
+<section class="tools" id="outils">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">Plateformes propriétaires</div>
+        <h2>Trois outils numériques pour incuber à distance.</h2>
+      </div>
+      <p class="lede">
+        Capacité actuelle&nbsp;: 25 entrepreneurs en présentiel à Lomé,
+        40 en distanciel partout en Afrique francophone. Nos plateformes propres
+        permettent de former, accompagner et financer à grande échelle.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      <article class="tool-card">
+        <span class="label">e-Learning</span>
+        <div class="name">IVIC</div>
+        <p class="role">Plateforme de formation en ligne. Modules adaptés aux ICC, parcours autonomes ou tutorés.</p>
+        <ul>
+          <li>Modules business pour créatifs</li>
+          <li>Cas pratiques ICC</li>
+          <li>Évaluations &amp; certification</li>
+        </ul>
+        <a class="link" href="outils.html#ivic">Explorer IVIC →</a>
+      </article>
+
+      <article class="tool-card">
+        <span class="label">e-Accompagnement</span>
+        <div class="name">e-PAPRICAI</div>
+        <p class="role">Mentorat et coaching à distance. Mise en relation avec un réseau d'experts ouest-africains.</p>
+        <ul>
+          <li>Visioconférences planifiées</li>
+          <li>Suivi de KPIs projet</li>
+          <li>Pair-à-pair entre cohortes</li>
+        </ul>
+        <a class="link" href="outils.html#e-papricai">Explorer e-PAPRICAI →</a>
+      </article>
+
+      <article class="tool-card">
+        <span class="label">e-Financement</span>
+        <div class="name">CREAFUND</div>
+        <p class="role">Crowdfunding dédié aux projets culturels et créatifs africains. Levées en FCFA et en devises.</p>
+        <ul>
+          <li>Campagnes vérifiées</li>
+          <li>Paiements mobile money</li>
+          <li>Mentor financier dédié</li>
+        </ul>
+        <a class="link" href="outils.html#creafund">Explorer CREAFUND →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTEURS -->
+<section class="section" id="secteurs">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">Secteurs couverts</div>
+        <h2>Toutes les industries culturelles, créatives et numériques.</h2>
+      </div>
+      <p class="lede">
+        Huit filières au cœur de notre programme. Si votre projet appartient à
+        l'un de ces secteurs — ou les croise — vous êtes au bon endroit.
+      </p>
+    </div>
+
+    <div class="sectors">
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="8" width="32" height="24" rx="2"/><path d="M6 26l8-8 6 6 6-4 12 10"/><circle cx="30" cy="16" r="2.5" fill="currentColor"/></svg>
+        <div class="name">Arts visuels</div>
+        <span class="count">— 08 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 34V12l20-4v22"/><circle cx="14" cy="34" r="4"/><circle cx="34" cy="30" r="4"/></svg>
+        <div class="name">Musique</div>
+        <span class="count">— 11 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="10" width="26" height="22" rx="2"/><path d="M32 16l10-4v20l-10-4z"/></svg>
+        <div class="name">Cinéma &amp; audiovisuel</div>
+        <span class="count">— 09 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 8v28h28V8H8z"/><path d="M14 14h16M14 20h16M14 26h10"/></svg>
+        <div class="name">Édition</div>
+        <span class="count">— 04 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="10" y="6" width="24" height="32" rx="3"/><circle cx="22" cy="32" r="2" fill="currentColor"/><path d="M14 12h16v14H14z"/></svg>
+        <div class="name">Apps &amp; numérique</div>
+        <span class="count">— 14 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14l8-6 6 4 6-4 8 6v22H10z"/><path d="M22 36V22h8v14"/></svg>
+        <div class="name">Mode &amp; artisanat d'art</div>
+        <span class="count">— 07 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 6l16 10v22H6V16z"/><rect x="18" y="22" width="8" height="16"/></svg>
+        <div class="name">Patrimoine</div>
+        <span class="count">— 03 projets</span>
+      </div>
+      <div class="sector">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="22" cy="22" r="14"/><path d="M22 8c4 4 4 24 0 28M22 8c-4 4-4 24 0 28M8 22h28"/></svg>
+        <div class="name">Arts vivants</div>
+        <span class="count">— 04 projets</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="section" id="projets" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">Cinq projets phares</div>
+        <h2>Ils ont été incubés ici.</h2>
+      </div>
+      <p class="lede">
+        Plus de 100 projets sont passés par PAPRICAI depuis 2014. En voici cinq qui
+        illustrent la diversité des ICC et l'ambition que nous portons collectivement.
+      </p>
+    </div>
+
+    <div class="stories">
+      <!-- Featured: GNADOE -->
+      <article class="story feat">
+        <div class="visual has-photo">
+          <img src="images/gnadoe.png" alt="Ulrich Chadare, fondateur du magazine GNADOE" loading="lazy" />
+          <span class="sector-tag">Médias · Communication</span>
+        </div>
+        <div class="body">
+          <div class="name">GNADOE</div>
+          <div class="lead"><strong>Ulrich Chadare</strong> · Togo · Cohorte 2021–2024</div>
+          <p>Magazine d'info-divertissement togolais devenu le média de référence à Lomé. Une preuve qu'une ICC numérique africaine peut toucher une audience massive sans renier son ancrage local.</p>
+          <div class="impact">
+            <span class="big">1M+</span>
+            <span class="lbl">lecteurs<br>mensuels</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTYBE -->
+      <article class="story">
+        <div class="visual has-tint-2 has-photo">
+          <img src="images/artybe.png" alt="Laura Nouhova Kpegli, fondatrice d'ARTYBE" loading="lazy" />
+          <span class="sector-tag">Tech créative</span>
+        </div>
+        <div class="body">
+          <div class="name">ARTYBE</div>
+          <div class="lead"><strong>Laura N. Kpegli</strong> · Togo · 2021–2024</div>
+          <p>App mobile de vente de connaissances créatives. La fondatrice du Théâtre Itinérant du Togo se réinvente en startup tech.</p>
+          <div class="impact">
+            <span class="big">2024</span>
+            <span class="lbl">phase de<br>test marché</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ADEC WEB TV -->
+      <article class="story">
+        <div class="visual has-tint-3 has-photo">
+          <img src="images/adec-webtv.png" alt="Adnane Katakpaou, fondateur d'ADEC WEB TV" style="object-position: center 18%;" loading="lazy" />
+          <span class="sector-tag">Audiovisuel · Cinéma</span>
+        </div>
+        <div class="body">
+          <div class="name">ADEC WEB TV</div>
+          <div class="lead"><strong>Adnane Katakpaou</strong> · Togo · Cohorte initiale</div>
+          <p>Plateforme de diffusion de documentaires, dessins animés et séries africaines. Une mission panafricaine portée depuis Lomé.</p>
+          <div class="impact">
+            <span class="big">8</span>
+            <span class="lbl">pays<br>diffusés</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- MAKFASHION -->
+      <article class="story">
+        <div class="visual has-tint-4 has-photo">
+          <img src="images/makfashion.png" alt="Amalao Nathalie Maklwa Rayimon, fondatrice de MAKFASHION" loading="lazy" />
+          <span class="sector-tag">Mode · Artisanat</span>
+        </div>
+        <div class="body">
+          <div class="name">MAKFASHION</div>
+          <div class="lead"><strong>A. Nathalie Rayimon</strong> · Togo · 2021–2024</div>
+          <p>Plateforme numérique de vente de pagnes et tenues traditionnels. Valoriser le patrimoine vestimentaire par le numérique.</p>
+          <div class="impact">
+            <span class="big">3</span>
+            <span class="lbl">pays<br>livrés</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SCENART -->
+      <article class="story">
+        <div class="visual has-tint-5 has-photo">
+          <img src="images/scenart.png" alt="Kokou Joel Djagbavi, fondateur de SCENART.COM" loading="lazy" />
+          <span class="sector-tag">Arts vivants · Numérique</span>
+        </div>
+        <div class="body">
+          <div class="name">SCENART.COM</div>
+          <div class="lead"><strong>Kokou Joel Djagbavi</strong> · Togo · 2021–2024</div>
+          <p>Diffusion live de spectacles de théâtre, en direct ou en différé. Rendre la scène africaine accessible partout, sur tout écran.</p>
+          <div class="impact">
+            <span class="big">live</span>
+            <span class="lbl">streaming<br>théâtre</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div style="display:flex; justify-content:center; margin-top:48px;">
+      <a class="btn btn-ghost" href="#">
+        Voir les 100+ projets
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE — COMMENT ÇA MARCHE -->
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">Comment ça marche</div>
+        <h2>Quatre étapes,<br>jusqu'à 36 mois.</h2>
+      </div>
+      <p class="lede">
+        Un parcours progressif, du test de l'idée jusqu'au prototype commercialisé.
+        Chaque phase peut être renouvelée ou arrêtée selon les avancées du projet.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="step">
+        <div class="dot" aria-hidden="true">01</div>
+        <div class="duration">Avant — 4 semaines</div>
+        <h3>Candidature</h3>
+        <p>Dossier en ligne, pitch vidéo, entretien. Sélection sur la qualité du projet et la motivation du porteur.</p>
+      </div>
+      <div class="step">
+        <div class="dot" aria-hidden="true">02</div>
+        <div class="duration">Pré-test — 3 mois</div>
+        <h3>Validation de l'idée</h3>
+        <p>Confronter le concept au réel. Étude de marché, business model, premiers tests utilisateurs.</p>
+      </div>
+      <div class="step">
+        <div class="dot" aria-hidden="true">03</div>
+        <div class="duration">PAPRICAI — 12 à 36 mois</div>
+        <h3>Incubation</h3>
+        <p>Coaching, formation IVIC, mentorat e-PAPRICAI, hébergement EDOU à Lomé. Construction de l'entreprise.</p>
+      </div>
+      <div class="step">
+        <div class="dot" aria-hidden="true">04</div>
+        <div class="duration">PAPRICAI+ — variable</div>
+        <h3>Accélération</h3>
+        <p>Prototypage, test marché, levée via CREAFUND. Mise sur le marché de votre offre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="section" id="apropos">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">Témoignages</div>
+        <h2>Dits par celles et ceux qui sont passés par là.</h2>
+      </div>
+      <p class="lede">
+        Au-delà des chiffres, ce que PAPRICAI change concrètement dans la trajectoire
+        d'un créatif d'Afrique de l'Ouest.
+      </p>
+    </div>
+
+    <div class="testimonials">
+      <article class="testi">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <blockquote>J'avais un magazine en idée. J'en suis sorti avec un média lu par un million de personnes.</blockquote>
+        <div class="who">
+          <div class="avatar"><img src="images/ulrich-chadare.png" alt="Ulrich Chadare" loading="lazy" /></div>
+          <div class="meta">
+            <div class="name">Ulrich Chadare</div>
+            <div class="role">Fondateur · GNADOE</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <blockquote>Passer du théâtre à la tech aurait été impossible seule. La couveuse m'a donné la méthode.</blockquote>
+        <div class="who">
+          <div class="avatar"><img src="images/laura-kpegli.png" alt="Laura N. Kpegli" loading="lazy" /></div>
+          <div class="meta">
+            <div class="name">Laura N. Kpegli</div>
+            <div class="role">Fondatrice · ARTYBE</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <blockquote>Le réseau SAECI, c'est ce qui m'a fait sortir du Togo. Aujourd'hui je livre dans trois pays.</blockquote>
+        <div class="who">
+          <div class="avatar"><img src="images/nathalie-rayimon.png" alt="A. Nathalie Rayimon" loading="lazy" /></div>
+          <div class="meta">
+            <div class="name">A. Nathalie Rayimon</div>
+            <div class="role">Fondatrice · MAKFASHION</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section class="partners">
+  <div class="wrap">
+    <h4>Ils nous soutiennent</h4>
+    <div class="partners-row">
+      <div class="partner has-logo" title="Union Européenne"><img src="images/flag-europe.svg" alt="Union Européenne" loading="lazy" /></div>
+      <div class="partner has-logo" title="Organisation internationale de la Francophonie"><img src="images/logo-oif.png" alt="OIF" loading="lazy" /></div>
+      <div class="partner has-logo span-2" title="Coopération allemande · GIZ"><img src="images/logo-giz.png" alt="GIZ — Coopération allemande" loading="lazy" /></div>
+      <div class="partner has-logo span-2" title="Afric'innov"><img src="images/logo-africinnov.png" alt="Afric'innov" loading="lazy" /></div>
+      <div class="partner has-logo span-2" title="AfriLabs"><img src="images/logo-afrilabs.png" alt="AfriLabs" loading="lazy" /></div>
+      <div class="partner has-logo" title="IKAM Togo"><img src="images/logo-ikam.png" alt="IKAM Togo" loading="lazy" /></div>
+      <div class="partner has-logo" title="FICDC"><img src="images/logo-ficdc.png" alt="FICDC" loading="lazy" /></div>
+      <div class="partner has-logo" title="Arterial Network"><img src="images/logo-arterial.png" alt="Arterial Network" loading="lazy" /></div>
+      <div class="partner has-logo" title="ANPE Togo"><img src="images/logo-anpe.png" alt="ANPE Togo" loading="lazy" /></div>
+      <div class="partner has-logo" title="African Culture Fund"><img src="images/logo-african-culture-fund.png" alt="African Culture Fund" loading="lazy" /></div>
+      <div class="partner has-logo" title="ADEC Ingénierie Culturelle"><img src="images/logo-adec.png" alt="ADEC Ingénierie Culturelle" loading="lazy" /></div>
+      <div class="partner has-logo" title="Association Heinrich Klose"><img src="images/logo-ahk.png" alt="Association Heinrich Klose" loading="lazy" /></div>
+      <div class="partner has-logo" title="Koré"><img src="images/logo-cck.png" alt="Koré" loading="lazy" /></div>
+      <div class="partner has-logo" title="Programme AWA · ACP-UE Culture"><img src="images/logo-awa.png" alt="Programme AWA - ACP-UE Culture Afrique de l'Ouest" loading="lazy" /></div>
+      <div class="partner has-logo" title="Institut Français"><img src="images/logo-institut-francais.png" alt="Institut Français" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="wrap">
+  <section class="final-cta">
+    <h2>Vous avez un projet ICC&nbsp;? <br>On commence par un café.</h2>
+    <div class="right">
+      <p>Candidatures ouvertes pour la cohorte 2026. Pré-test sur 3 mois, accompagnement personnalisé, accès aux outils numériques. Au Togo, au Bénin, ou en distanciel partout en Afrique de l'Ouest francophone.</p>
+      <a href="candidater.html" class="btn">
+        Candidater à la couveuse
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <small>Réponse sous 4 semaines · Gratuit · Sans engagement</small>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom: 20px;">
+        <img src="images/logo-papricai.png" alt="Couveuse PAPRICAI" />
+      </div>
+      <p style="color: rgba(245,245,224,.7); font-size: 14px; max-width: 36ch;">
+        Premier incubateur dédié aux industries culturelles, créatives et numériques en Afrique de l'Ouest. Fondé en 2014. Programme phare de l'Association Heinrich Klose.
+      </p>
+    </div>
+    <div>
+      <h4>Programme</h4>
+      <a href="candidater.html">Candidater</a>
+      <a href="candidater.html#phases">PAPRICAI</a>
+      <a href="candidater.html#phases">PAPRICAI+</a>
+      <a href="candidater.html#edou">EDOU</a>
+    </div>
+    <div>
+      <h4>Outils</h4>
+      <a href="outils.html#ivic">IVIC</a>
+      <a href="outils.html#e-papricai">e-PAPRICAI</a>
+      <a href="outils.html#creafund">CREAFUND</a>
+      <a href="style-guide.html">Style guide</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="#">Lomé, Togo</a>
+      <a href="mailto:contact@couveuse-papricai.org">contact@couveuse-papricai.org</a>
+      <a href="tel:+22891152195">+228 91 15 21 95</a>
+      <a href="https://www.linkedin.com/in/couveuse-papricai-7269961b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.facebook.com/papricai" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <div class="signoff">
+      <span>© 2026 Couveuse PAPRICAI · Association Heinrich Klose</span>
+      <span>Mentions légales · Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var burger = document.querySelector('.nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  var backdrop = document.getElementById('nav-backdrop');
+  var closeBtn = drawer.querySelector('.nav-drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    burger.focus();
+  }
+
+  burger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+
+  drawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeDrawer);
+  });
+})();
+</script>
+
+</body>
+</html>
