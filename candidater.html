@@ -725,10 +725,14 @@
     </p>
 
     <div class="form-card">
-      <form name="candidature-papricai" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="candidature-form" novalidate>
-        <!-- Netlify bot protection -->
-        <input type="hidden" name="form-name" value="candidature-papricai" />
-        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+      <form action="https://api.web3forms.com/submit" method="POST" id="candidature-form" novalidate>
+        <!-- Web3Forms config -->
+        <input type="hidden" name="access_key" value="REMPLACER_PAR_CLE_WEB3FORMS" />
+        <input type="hidden" name="subject" value="Nouvelle candidature PAPRICAI — Cohorte 2026" />
+        <input type="hidden" name="from_name" value="Couveuse PAPRICAI — Formulaire de candidature" />
+        <input type="hidden" name="redirect" value="false" />
+        <!-- Protection anti-spam -->
+        <input type="checkbox" name="botcheck" style="display:none;" />
 
         <!-- SECTION 1 — IDENTITÉ -->
         <div class="form-divider"><span>01 · Votre identité</span></div>
@@ -1011,9 +1015,10 @@
   bindCounter('description', 'desc-count');
   bindCounter('motivation', 'motiv-count');
 
-  /* — Soumission du formulaire (Netlify Forms) — */
+  /* — Soumission du formulaire (Web3Forms) — */
   var form = document.getElementById('candidature-form');
   var successBox = document.getElementById('form-success');
+  var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -1022,16 +1027,32 @@
         form.reportValidity();
         return;
       }
+      /* Désactiver le bouton pendant l'envoi */
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours…';
+      }
       var data = new FormData(form);
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString() })
-        .then(function () {
-          form.style.display = 'none';
-          successBox.classList.add('visible');
-          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
+            form.style.display = 'none';
+            successBox.classList.add('visible');
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error(json.message || 'Erreur inconnue');
+          }
         })
-        .catch(function () {
-          alert('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@couveuse-papricai.org');
+        .catch(function (err) {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Envoyer ma candidature <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+          }
+          alert('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@couveuse-papricai.org\n\nDétail : ' + err.message);
         });
     });
   }
