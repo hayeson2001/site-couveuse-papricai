@@ -461,7 +461,7 @@
       <a href="index.html#projets">Projets</a>
       <a href="index.html#apropos">À propos</a>
     </nav>
-    <a href="#candidature" class="nav-cta">
+    <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="nav-cta">
       Candidater
       <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
     </a>
@@ -483,7 +483,7 @@
     <a href="outils.html">Outils numériques</a>
     <a href="index.html#projets">Projets</a>
     <a href="index.html#apropos">À propos</a>
-    <a href="#formulaire" class="drawer-cta">Candidater à la couveuse</a>
+    <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="drawer-cta">Candidater à la couveuse</a>
   </div>
 </div>
 
@@ -498,7 +498,7 @@
       presque-prêt à scaler. Candidatures ouvertes pour la cohorte 2026.
     </p>
     <div class="page-hero-actions">
-      <a href="#formulaire" class="btn btn-primary">
+      <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="btn btn-primary">
         Démarrer ma candidature
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
@@ -671,7 +671,7 @@
     </div>
 
     <div style="margin-top: 56px; display: flex; justify-content: flex-start;">
-      <a href="#formulaire" class="btn btn-primary">
+      <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="btn btn-primary">
         Démarrer mon dossier
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
@@ -720,19 +720,28 @@
     <div class="section-tag">Formulaire de candidature</div>
     <h2>Déposez votre candidature</h2>
     <p class="form-intro">
-      20 minutes suffisent. Remplissez ce formulaire, notre équipe vous recontacte sous 4 semaines.
-      Candidatures ouvertes jusqu'au <strong>30 juin 2026</strong>.
+      Le formulaire de candidature se remplit sur notre plateforme e-PAPRICAI.
+      Comptez environ 20 minutes. Votre dossier est enregistré directement dans notre système et
+      vous recevez une confirmation par email. Candidatures ouvertes jusqu'au <strong>30 juin 2026</strong>.
     </p>
 
-    <div class="form-card">
-      <form action="https://api.web3forms.com/submit" method="POST" id="candidature-form" novalidate>
-        <!-- Web3Forms config -->
-        <input type="hidden" name="access_key" value="7bd0f4ea-309c-4567-81fb-563da1df77ff" />
-        <input type="hidden" name="subject" value="Nouvelle candidature PAPRICAI — Cohorte 2026" />
-        <input type="hidden" name="from_name" value="Couveuse PAPRICAI — Formulaire de candidature" />
-        <input type="hidden" name="redirect" value="false" />
-        <!-- Protection anti-spam -->
-        <input type="checkbox" name="botcheck" style="display:none;" />
+    <div class="form-card" style="display:flex; flex-direction:column; align-items:center; gap:24px; padding: 48px 32px; text-align:center;">
+      <div style="width:64px;height:64px;background:var(--green-tint,#f0faf5);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--green,#2d6a4f)" stroke-width="2"><path d="M16 4v16M8 12l8 8 8-8"/><path d="M6 24h20"/></svg>
+      </div>
+      <div>
+        <p style="font-size:1.1rem;font-weight:600;margin:0 0 8px;">Prêt(e) à candidater ?</p>
+        <p style="color:#6b7280;font-size:0.95rem;margin:0;">Le formulaire s'ouvre dans un nouvel onglet sur la plateforme e-PAPRICAI. Toutes vos réponses sont enregistrées en temps réel.</p>
+      </div>
+      <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1rem; padding: 14px 32px;">
+        Accéder au formulaire de candidature
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <small style="color:#9ca3af;">Gratuit · Sans engagement · Réponse sous 4 semaines</small>
+
+      <!-- PLACEHOLDER FORM TAG REMOVED - kept for HTML structure -->
+      <div style="display:none;">
+        <form id="candidature-form-placeholder">
 
         <!-- SECTION 1 — IDENTITÉ -->
         <div class="form-divider"><span>01 · Votre identité</span></div>
@@ -741,186 +750,6 @@
           <div class="form-group">
             <label for="prenom">Prénom <span class="req">*</span></label>
             <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" autocomplete="given-name" />
-          </div>
-          <div class="form-group">
-            <label for="nom">Nom <span class="req">*</span></label>
-            <input type="text" id="nom" name="nom" required placeholder="Votre nom de famille" autocomplete="family-name" />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="votre@email.com" autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="telephone">Téléphone / WhatsApp <span class="req">*</span></label>
-            <input type="tel" id="telephone" name="telephone" required placeholder="+228 XX XX XX XX" autocomplete="tel" />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="pays">Pays de résidence <span class="req">*</span></label>
-            <select id="pays" name="pays" required>
-              <option value="">Choisir un pays…</option>
-              <option>Togo</option>
-              <option>Bénin</option>
-              <option>Burkina Faso</option>
-              <option>Mali</option>
-              <option>Côte d'Ivoire</option>
-              <option>Sénégal</option>
-              <option>Niger</option>
-              <option>Guinée</option>
-              <option>Cameroun</option>
-              <option>Autre pays francophone</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="ville">Ville <span class="req">*</span></label>
-            <input type="text" id="ville" name="ville" required placeholder="Ex. Lomé, Cotonou, Ouagadougou…" />
-          </div>
-        </div>
-
-        <!-- SECTION 2 — PROJET -->
-        <div class="form-divider"><span>02 · Votre projet</span></div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nom-projet">Nom du projet <span class="req">*</span></label>
-            <input type="text" id="nom-projet" name="nom_projet" required placeholder="Le nom de votre projet ou entreprise" />
-          </div>
-          <div class="form-group">
-            <label for="secteur">Secteur ICC <span class="req">*</span></label>
-            <select id="secteur" name="secteur" required>
-              <option value="">Choisir un secteur…</option>
-              <option>Arts visuels</option>
-              <option>Musique</option>
-              <option>Cinéma &amp; audiovisuel</option>
-              <option>Édition</option>
-              <option>Apps &amp; numérique créatif</option>
-              <option>Mode &amp; artisanat d'art</option>
-              <option>Patrimoine culturel</option>
-              <option>Arts vivants (théâtre, danse…)</option>
-              <option>Médias &amp; communication</option>
-              <option>Autre secteur ICC</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="stade">Stade actuel du projet <span class="req">*</span></label>
-          <select id="stade" name="stade" required>
-            <option value="">Choisir un stade…</option>
-            <option>Idée — je n'ai pas encore commencé</option>
-            <option>Concept développé — j'ai réfléchi et j'ai un plan</option>
-            <option>Prototype ou MVP — j'ai un premier produit/service</option>
-            <option>Déjà lancé — j'ai des clients ou des utilisateurs</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="description">
-            Description courte du projet <span class="req">*</span>
-            <span class="hint">— Qu'est-ce que c'est ? Pour qui ? Pourquoi maintenant ?</span>
-          </label>
-          <textarea id="description" name="description" required maxlength="600"
-            placeholder="Décrivez votre projet en 3 à 5 phrases. Pas besoin de jargon — soyez vous-même."></textarea>
-          <div class="char-count"><span id="desc-count">0</span> / 600 caractères</div>
-        </div>
-
-        <div class="form-group">
-          <label for="motivation">
-            Pourquoi la Couveuse PAPRICAI ? <span class="req">*</span>
-            <span class="hint">— Qu'espérez-vous en retirer ?</span>
-          </label>
-          <textarea id="motivation" name="motivation" required maxlength="500"
-            placeholder="Expliquez-nous ce qui vous amène ici et ce que vous attendez du programme."></textarea>
-          <div class="char-count"><span id="motiv-count">0</span> / 500 caractères</div>
-        </div>
-
-        <!-- SECTION 3 — PROGRAMME -->
-        <div class="form-divider"><span>03 · Programme &amp; modalités</span></div>
-
-        <div class="form-group">
-          <label>Phase visée <span class="req">*</span></label>
-          <div class="radio-group">
-            <label>
-              <input type="radio" name="phase" value="PAPRICAI (pré-test + incubation)" required />
-              <span><strong>PAPRICAI</strong> — Pré-test 3 mois + incubation jusqu'à 36 mois. Je pars de zéro ou presque.</span>
-            </label>
-            <label>
-              <input type="radio" name="phase" value="PAPRICAI+ (accélération)" />
-              <span><strong>PAPRICAI+</strong> — Accélération. Mon projet est déjà lancé, je veux passer à l'échelle.</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Modalité souhaitée <span class="req">*</span></label>
-          <div class="radio-group">
-            <label>
-              <input type="radio" name="modalite" value="Présentiel à Lomé (EDOU)" required />
-              <span><strong>Présentiel</strong> — Je souhaite intégrer l'espace EDOU à Lomé.</span>
-            </label>
-            <label>
-              <input type="radio" name="modalite" value="Distanciel (IVIC + e-PAPRICAI)" />
-              <span><strong>Distanciel</strong> — Je préfère être accompagné via IVIC et e-PAPRICAI.</span>
-            </label>
-            <label>
-              <input type="radio" name="modalite" value="Les deux (mixte)" />
-              <span><strong>Mixte</strong> — Présentiel et distanciel selon les phases.</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="decouverte">Comment avez-vous connu PAPRICAI ?</label>
-          <select id="decouverte" name="decouverte">
-            <option value="">Choisir…</option>
-            <option>Bouche à oreille / un ami</option>
-            <option>Réseaux sociaux (Facebook, Instagram, LinkedIn)</option>
-            <option>Site web de la couveuse</option>
-            <option>Un événement ou une conférence</option>
-            <option>Un ancien incubé PAPRICAI</option>
-            <option>Un partenaire (UE, OIF, GIZ…)</option>
-            <option>Autre</option>
-          </select>
-        </div>
-
-        <!-- SECTION 4 — ENGAGEMENTS -->
-        <div class="form-divider"><span>04 · Engagements</span></div>
-
-        <div class="form-group">
-          <div class="check-group">
-            <label>
-              <input type="checkbox" name="eligibilite" required />
-              <span>J'ai lu les critères d'éligibilité et je confirme y répondre au moins partiellement. <span class="req">*</span></span>
-            </label>
-            <label>
-              <input type="checkbox" name="disponibilite" required />
-              <span>Je suis disponible au moins 2 à 3 jours par semaine pendant la durée du programme. <span class="req">*</span></span>
-            </label>
-            <label>
-              <input type="checkbox" name="contact" required />
-              <span>J'accepte d'être contacté par l'équipe PAPRICAI par email et WhatsApp. <span class="req">*</span></span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-submit">
-          <button type="submit" class="btn btn-primary">
-            Envoyer ma candidature
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </button>
-          <small>Gratuit · Sans engagement · Réponse sous 4 semaines</small>
-        </div>
-      </form>
-
-      <!-- Message de confirmation -->
-      <div class="form-success" id="form-success">
-        <h3>Candidature reçue !</h3>
-        <p>Merci pour votre dossier. Notre équipe l'étudie et vous répond dans les 4 semaines. En attendant, n'hésitez pas à nous écrire à <a href="mailto:contact@couveuse-papricai.org" style="color: var(--green); font-weight:600;">contact@couveuse-papricai.org</a> ou via WhatsApp au <a href="tel:+22891152195" style="color: var(--green); font-weight:600;">+228 91 15 21 95</a>.</p>
       </div>
     </div>
   </div>
@@ -931,7 +760,7 @@
   <div class="wrap">
     <h2>Une intuition créative ?<br>C'est le moment.</h2>
     <p>Candidatures ouvertes — cohorte 2026. Pré-test gratuit de 3 mois, sans engagement au-delà. Réponse sous 4 semaines.</p>
-    <a href="#formulaire" class="btn">
+    <a href="https://e-papricai.vercel.app/candidater" target="_blank" rel="noopener" class="btn">
       Démarrer ma candidature
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
     </a>
