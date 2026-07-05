@@ -38,8 +38,8 @@
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@700;800&display=swap" />
 
-<!-- Preload image hero (LCP) -->
-<link rel="preload" as="image" href="images/hero-atelier.jpg" fetchpriority="high" />
+<!-- Preload image hero (LCP) — WebP en priorité -->
+<link rel="preload" as="image" href="images/hero-atelier.webp" type="image/webp" fetchpriority="high" />
 
 <link rel="stylesheet" href="styles.css" />
 
@@ -799,7 +799,10 @@
       </div>
 
       <div class="hero-visual">
-        <img class="hero-photo" src="images/hero-atelier.jpg" alt="Formation d'entrepreneurs ICC à la couveuse PAPRICAI" />
+        <picture>
+          <source type="image/webp" srcset="images/hero-atelier.webp" />
+          <img class="hero-photo" src="images/hero-atelier.jpg" alt="Formation d'entrepreneurs ICC à la couveuse PAPRICAI" width="960" height="1200" loading="eager" fetchpriority="high" />
+        </picture>
         <div class="corner" aria-label="Taux de réussite">
           70%<br>
           <small>de réussite</small>
@@ -1018,7 +1021,7 @@
       <!-- Featured: GNADOE -->
       <article class="story feat">
         <div class="visual has-photo">
-          <img src="images/gnadoe.png" alt="Ulrich Chadare, fondateur du magazine GNADOE" loading="lazy" />
+          <picture><source type="image/webp" srcset="images/gnadoe.webp" /><img src="images/gnadoe.png" alt="Ulrich Chadare, fondateur du magazine GNADOE" loading="lazy" width="480" height="480" /></picture>
           <span class="sector-tag">Médias · Communication</span>
         </div>
         <div class="body">
@@ -1035,7 +1038,7 @@
       <!-- ARTYBE -->
       <article class="story">
         <div class="visual has-tint-2 has-photo">
-          <img src="images/artybe.png" alt="Laura Nouhova Kpegli, fondatrice d'ARTYBE" loading="lazy" />
+          <picture><source type="image/webp" srcset="images/artybe.webp" /><img src="images/artybe.png" alt="Laura Nouhova Kpegli, fondatrice d'ARTYBE" loading="lazy" width="480" height="480" /></picture>
           <span class="sector-tag">Tech créative</span>
         </div>
         <div class="body">
@@ -1052,7 +1055,7 @@
       <!-- ADEC WEB TV -->
       <article class="story">
         <div class="visual has-tint-3 has-photo">
-          <img src="images/adec-webtv.png" alt="Adnane Katakpaou, fondateur d'ADEC WEB TV" style="object-position: center 18%;" loading="lazy" />
+          <picture><source type="image/webp" srcset="images/adec-webtv.webp" /><img src="images/adec-webtv.png" alt="Adnane Katakpaou, fondateur d'ADEC WEB TV" style="object-position: center 18%;" loading="lazy" width="480" height="480" /></picture>
           <span class="sector-tag">Audiovisuel · Cinéma</span>
         </div>
         <div class="body">
@@ -1069,7 +1072,7 @@
       <!-- MAKFASHION -->
       <article class="story">
         <div class="visual has-tint-4 has-photo">
-          <img src="images/makfashion.png" alt="Amalao Nathalie Maklwa Rayimon, fondatrice de MAKFASHION" loading="lazy" />
+          <picture><source type="image/webp" srcset="images/makfashion.webp" /><img src="images/makfashion.png" alt="Amalao Nathalie Maklwa Rayimon, fondatrice de MAKFASHION" loading="lazy" width="480" height="480" /></picture>
           <span class="sector-tag">Mode · Artisanat</span>
         </div>
         <div class="body">
@@ -1086,7 +1089,7 @@
       <!-- SCENART -->
       <article class="story">
         <div class="visual has-tint-5 has-photo">
-          <img src="images/scenart.png" alt="Kokou Joel Djagbavi, fondateur de SCENART.COM" loading="lazy" />
+          <picture><source type="image/webp" srcset="images/scenart.webp" /><img src="images/scenart.png" alt="Kokou Joel Djagbavi, fondateur de SCENART.COM" loading="lazy" width="480" height="480" /></picture>
           <span class="sector-tag">Arts vivants · Numérique</span>
         </div>
         <div class="body">
@@ -1172,7 +1175,7 @@
         <span class="quote-mark" aria-hidden="true">"</span>
         <blockquote>J'avais un magazine en idée. J'en suis sorti avec un média lu par un million de personnes.</blockquote>
         <div class="who">
-          <div class="avatar"><img src="images/ulrich-chadare.png" alt="Ulrich Chadare" loading="lazy" /></div>
+          <div class="avatar"><picture><source type="image/webp" srcset="images/ulrich-chadare.webp" /><img src="images/ulrich-chadare.png" alt="Ulrich Chadare" loading="lazy" width="80" height="80" /></picture></div>
           <div class="meta">
             <div class="name">Ulrich Chadare</div>
             <div class="role">Fondateur · GNADOE</div>
@@ -1184,7 +1187,7 @@
         <span class="quote-mark" aria-hidden="true">"</span>
         <blockquote>Passer du théâtre à la tech aurait été impossible seule. La couveuse m'a donné la méthode.</blockquote>
         <div class="who">
-          <div class="avatar"><img src="images/laura-kpegli.png" alt="Laura N. Kpegli" loading="lazy" /></div>
+          <div class="avatar"><picture><source type="image/webp" srcset="images/laura-kpegli.webp" /><img src="images/laura-kpegli.png" alt="Laura N. Kpegli" loading="lazy" width="80" height="80" /></picture></div>
           <div class="meta">
             <div class="name">Laura N. Kpegli</div>
             <div class="role">Fondatrice · ARTYBE</div>
@@ -1196,7 +1199,7 @@
         <span class="quote-mark" aria-hidden="true">"</span>
         <blockquote>Le réseau SAECI, c'est ce qui m'a fait sortir du Togo. Aujourd'hui je livre dans trois pays.</blockquote>
         <div class="who">
-          <div class="avatar"><img src="images/nathalie-rayimon.png" alt="A. Nathalie Rayimon" loading="lazy" /></div>
+          <div class="avatar"><picture><source type="image/webp" srcset="images/nathalie-rayimon.webp" /><img src="images/nathalie-rayimon.png" alt="A. Nathalie Rayimon" loading="lazy" width="80" height="80" /></picture></div>
           <div class="meta">
             <div class="name">A. Nathalie Rayimon</div>
             <div class="role">Fondatrice · MAKFASHION</div>
