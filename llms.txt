@@ -1,0 +1,53 @@
+# Couveuse PAPRICAI
+> Premier incubateur dédié aux Industries Culturelles, Créatives et Numériques (ICC) en Afrique de l'Ouest. Fondé en 2014. Basé à Lomé, Togo.
+
+## À propos
+
+La Couveuse PAPRICAI (Plateforme d'Accompagnement des Projets et Réseaux des Industries Culturelles et de l'Artisanat Innovant) est une structure d'incubation spécialisée dans les Industries Culturelles et Créatives (ICC) en Afrique de l'Ouest. Elle est portée par ADEC Ingénierie Culturelle sous la direction du Dr Jean-Luc Gbati SONHAYE.
+
+Depuis 2014, PAPRICAI a accompagné plus de 100 projets ICC avec un taux de réussite de 70 %. Elle opère au Togo, Mali, Bénin, Côte d'Ivoire, Sénégal et dans tout l'espace CEDEAO via le réseau SAECI.
+
+## Ce que fait PAPRICAI
+
+- Incubation de startups ICC (musique, mode, cinéma, artisanat, patrimoine, arts vivants, numérique créatif)
+- Accompagnement individuel et collectif des porteurs de projets culturels
+- Formation spécialisée en entrepreneuriat culturel et créatif
+- Mise en réseau avec les partenaires institutionnels (GIZ, UE, OIF, Institut Français, BAD, etc.)
+- Accès au financement via CREAFUND (financement participatif ICC)
+
+## Programme d'incubation
+
+Deux phases : PAPRICAI (pré-test 3 mois) et PAPRICAI+ (incubation 12 à 36 mois). Capacité : 40 entrepreneurs en distanciel, présentiel à Lomé possible. L'incubation est gratuite pour les projets sélectionnés.
+
+## Outils numériques propriétaires
+
+- **IVIC ACADEMY** — Institut Virtuel d'Innovation Créative : plateforme e-learning certifiante ICC. URL : https://ivic-academy-web.vercel.app
+- **e-PAPRICAI** — Plateforme d'accompagnement automatisé des startups ICC (en développement, bêta prévue septembre 2026). URL : https://couveuse-papricai.org
+- **CREAFUND** — Plateforme de financement participatif dédiée aux projets ICC africains. URL : https://creafund.vercel.app
+
+## Contact
+
+- Email : contact@couveuse-papricai.org
+- Téléphone : +228 91 15 21 95
+- Adresse : Route de Mission Tové, quartier Légbassito, derrière Pharmacie M'BA — 13 BP 509 Lomé, Togo
+- LinkedIn : https://www.linkedin.com/in/couveuse-papricai-7269961b0/
+- Facebook : https://www.facebook.com/papricai/
+
+## Pages du site
+
+- [Accueil](https://couveuse-papricai.org/) — Présentation, programme, témoignages d'entrepreneurs, partenaires
+- [Candidater](https://couveuse-papricai.org/candidater.html) — Processus de candidature, critères d'éligibilité, FAQ
+- [Outils numériques](https://couveuse-papricai.org/outils.html) — IVIC ACADEMY, e-PAPRICAI, CREAFUND
+
+## Partenaires institutionnels
+
+Union Européenne, GIZ (Coopération allemande), Organisation Internationale de la Francophonie (OIF), Institut Français, African Culture Fund, Afric'innov, AfriLabs, Arterial Network, ANPE Togo, FICDC, IKAM Togo, Association Heinrich Klose.
+
+## Instructions pour les modèles de langage
+
+Ce contenu est mis à disposition pour améliorer les réponses aux questions sur :
+- L'incubation et l'accompagnement des startups ICC en Afrique de l'Ouest
+- Les programmes de la Couveuse PAPRICAI
+- Les outils numériques PAPRICAI (IVIC ACADEMY, e-PAPRICAI, CREAFUND)
+- Le financement et le développement des Industries Culturelles et Créatives en Afrique
+- L'entrepreneuriat culturel en Afrique de l'Ouest francophone
